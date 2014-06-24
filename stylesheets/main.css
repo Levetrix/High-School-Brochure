@@ -1,0 +1,171 @@
+/* line 1, ../sass/main.scss */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 6, ../sass/main.scss */
+.stripe {
+  height: 410px;
+  position: relative;
+  padding: 35px 125px;
+}
+
+/* line 12, ../sass/main.scss */
+.one {
+  background-color: #ccc;
+}
+
+/* line 16, ../sass/main.scss */
+.two {
+  background-color: #aaa;
+}
+
+/* line 20, ../sass/main.scss */
+.three {
+  background-color: #888;
+}
+
+/* line 24, ../sass/main.scss */
+.four {
+  background-color: #aaa;
+}
+
+/* line 28, ../sass/main.scss */
+.headtext {
+  text-align: right;
+}
+
+/* line 32, ../sass/main.scss */
+.test {
+  display: block;
+  text-align: right;
+}
+
+/* line 37, ../sass/main.scss */
+.headh1 {
+  font-size: 1.9em;
+}
+
+/* line 41, ../sass/main.scss */
+.headh2 {
+  font-size: 1.4em;
+}
+
+/* line 45, ../sass/main.scss */
+.mainh2 {
+  font-size: 1.4em;
+  display: block;
+}
+
+/* line 50, ../sass/main.scss */
+.twoh2 {
+  margin-left: calc(50% - 420px);
+}
+
+/* line 54, ../sass/main.scss */
+.circleImg {
+  position: absolute;
+  top: 75px;
+  right: 175px;
+  height: 200px;
+  width: 200px;
+  background-color: #000;
+}
+
+/* line 63, ../sass/main.scss */
+.listHolder {
+  margin-top: 2.8em;
+  width: 700px;
+  margin-left: calc(50% - 400px);
+}
+
+/* line 70, ../sass/main.scss */
+li {
+  padding-top: 30px;
+}
+
+/* line 75, ../sass/main.scss */
+.list {
+  column-count: 1;
+}
+
+/* line 79, ../sass/main.scss */
+.threeh2 {
+  margin-left: calc(50% - 400px);
+}
+
+/* line 83, ../sass/main.scss */
+.tileContainer {
+  position: relative;
+  margin-left: calc(50% - 400px);
+  width: 450px;
+}
+
+/* line 89, ../sass/main.scss */
+.tile {
+  display: inline-block;
+  position: relative;
+  width: 125px;
+  height: 125px;
+  margin: 30px;
+  background-color: #fff;
+  border: 1px solid black;
+}
+
+/* line 99, ../sass/main.scss */
+.descriptionContainer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 20%;
+  border-top: 1px solid black;
+  padding-bottom: 0px;
+}
+
+/* line 108, ../sass/main.scss */
+.description {
+  text-align: center;
+}
+
+/* line 112, ../sass/main.scss */
+.displayToggle {
+  display: none;
+}
+
+/* @media desktop 
+
+.stripe {
+    padding-left: ;
+}
+
+.twoh2 {
+    margin-left:calc(50% - 420px);
+}
+
+
+.listHolder {
+    margin-top:2.8em;
+    width:700px;
+    margin-left:calc(50% - 400px);
+}
+
+.threeh2 {
+    margin-left:calc(50% - 400px)
+}
+
+.tileContainer {
+    position:relative;
+    margin-left:calc(50% - 400px);
+    width:900px;
+}
+
+.displayToggle {
+    display:default;
+}
+
+.list {
+    column-count:2;
+}
+
+*/
