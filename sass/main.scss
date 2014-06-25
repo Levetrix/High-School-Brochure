@@ -43,6 +43,7 @@ body {
 }
 
 .three {
+    text-align:center;
     background-color:#888;
     padding: 1.5em;
 }
@@ -71,13 +72,15 @@ body {
 .mainh2 {
     font-size:1.4em;
     display:block;
+    orphans:3;
 }
 
 .twoh2 {
-	margin-left:calc(50% - 420px);
+	
 }
 
 .circleImg {
+	display:none;
 	position:absolute;
 	top:3em;
 	right:3em;
@@ -88,7 +91,7 @@ body {
 
 .listHolder {
 	margin-top:2.8em;
-	margin-left:calc(50% - 400px);
+	
 }
 
 
@@ -102,15 +105,12 @@ li {
 }
 
 .threeh2 {
-	margin-left:calc(50% - 400px)
+	text-align:center;
 }
 
 .tileContainer {
-	/*
-	position:relative;
-	margin-left:calc(50% - 400px);
-	width:450px;
-	*/
+	display:inline;
+	text-align:center;
 }
 
 .tile {
@@ -121,6 +121,10 @@ li {
 	margin:1.5em;
 	background-color:#fff;
 	border:1px solid black;
+}
+
+.tileText{
+	text-align:center;
 }
 
 .descriptionContainer {
@@ -187,22 +191,46 @@ li {
 
 
 
-@media #{$small-up} { }
-@media #{$small-only} { }
 
-@media #{$medium-up} { }
-@media #{$medium-only} {  
-    .tile {
-       width: 12.70820393249937em;
-       height: 12.70820393249937em;
+@media (min-width: 28.5em) and (max-width: 53.25em ) {
+	.tile {
+       width: 9em;
+       height: 9em;
+      
+    }
+    
+    .descriptionContainer {
+        display:block;
+    }
+    
+    .tileText {
+    display:none;
     }
 }
 
-@media #{$large-up} { }
-@media #{$large-only} { }
-
-@media #{$xlarge-up} { }
-@media #{$xlarge-only} { }
+@media (min-width: 53.315em) {
+	.tile {
+        width: 9em;
+        height: 9em;
+	}
+	
+	.descriptionContainer {
+        display:block;
+    }
+    
+    .tileText {
+        display:none;
+    }
+    
+    .tileContainer {
+       max-width:36.5em;
+    }
+    
+    .tile {
+        display:inline-block;
+    }
+    
+}
 
 
 
