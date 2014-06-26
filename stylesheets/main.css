@@ -1,108 +1,100 @@
-/* 0, 540px */
-/* 641px, 1024px */
-/* 1025px, 1440px */
-/* 1441px */
-/* line 26, ../sass/main.scss */
+/* line 1, ../sass/main.scss */
 body {
   padding: 0;
   margin: 0;
 }
 
-/* line 31, ../sass/main.scss */
+/* line 6, ../sass/main.scss */
 .stripe {
   min-height: 410px;
   position: relative;
   padding: 3em;
 }
 
-/* line 37, ../sass/main.scss */
+/* line 12, ../sass/main.scss */
 .one {
   background-color: #ccc;
 }
 
-/* line 41, ../sass/main.scss */
+/* line 16, ../sass/main.scss */
 .two {
   background-color: #aaa;
 }
 
-/* line 45, ../sass/main.scss */
+/* line 20, ../sass/main.scss */
 .three {
   text-align: center;
   background-color: #888;
   padding: 1.5em;
 }
 
-/* line 51, ../sass/main.scss */
+/* line 26, ../sass/main.scss */
 .four {
   background-color: #aaa;
 }
 
-/* line 55, ../sass/main.scss */
+/* line 30, ../sass/main.scss */
 .headtext {
   text-align: right;
 }
 
-/* line 59, ../sass/main.scss */
+/* line 34, ../sass/main.scss */
 .test {
   display: block;
   text-align: right;
 }
 
-/* line 64, ../sass/main.scss */
+/* line 39, ../sass/main.scss */
 .headh1 {
   font-size: 1.9em;
 }
 
-/* line 68, ../sass/main.scss */
+/* line 43, ../sass/main.scss */
 .headh2 {
   font-size: 1.4em;
 }
 
-/* line 72, ../sass/main.scss */
+/* line 47, ../sass/main.scss */
 .mainh2 {
   font-size: 1.4em;
   display: block;
   orphans: 3;
 }
 
-/* line 82, ../sass/main.scss */
+/* line 57, ../sass/main.scss */
 .circleImg {
   display: none;
   position: absolute;
-  top: 3em;
-  right: 3em;
-  height: 100%;
-  width: auto;
+  top: 10em;
+  right: 7em;
+  height: 10em;
+  width: 10em;
   background-color: #000;
 }
 
-/* line 92, ../sass/main.scss */
+/* line 67, ../sass/main.scss */
 .listHolder {
   margin-top: 2.8em;
+  max-width: 45em;
 }
 
-/* line 98, ../sass/main.scss */
+/* line 74, ../sass/main.scss */
 li {
   padding-top: 30px;
 }
 
-/* line 103, ../sass/main.scss */
-.list {
-  column-count: 1;
-}
-
-/* line 107, ../sass/main.scss */
+/* line 83, ../sass/main.scss */
 .threeh2 {
   text-align: center;
 }
 
-/* line 111, ../sass/main.scss */
+/* line 87, ../sass/main.scss */
 .tileContainer {
   display: inline;
   text-align: center;
 }
 
-/* line 116, ../sass/main.scss */
+/* line 92, ../sass/main.scss */
 .tile {
   display: inline-block;
   position: relative;
@@ -113,12 +105,12 @@ li {
   border: 1px solid black;
 }
 
-/* line 126, ../sass/main.scss */
+/* line 102, ../sass/main.scss */
 .tileText {
   text-align: center;
 }
 
-/* line 130, ../sass/main.scss */
+/* line 106, ../sass/main.scss */
 .descriptionContainer {
   position: absolute;
   bottom: 0px;
@@ -128,12 +120,12 @@ li {
   padding-bottom: 0px;
 }
 
-/* line 139, ../sass/main.scss */
+/* line 115, ../sass/main.scss */
 .description {
   text-align: center;
 }
 
-/* line 143, ../sass/main.scss */
+/* line 119, ../sass/main.scss */
 .displayToggle {
   display: none;
 }
@@ -175,46 +167,73 @@ li {
 
 */
 @media (min-width: 28.5em) and (max-width: 53.25em) {
-  /* line 196, ../sass/main.scss */
+  /* line 172, ../sass/main.scss */
   .tile {
     width: 9em;
     height: 9em;
   }
 
-  /* line 202, ../sass/main.scss */
+  /* line 178, ../sass/main.scss */
   .descriptionContainer {
     display: block;
   }
 
-  /* line 206, ../sass/main.scss */
+  /* line 182, ../sass/main.scss */
   .tileText {
     display: none;
   }
 }
 @media (min-width: 53.315em) {
-  /* line 212, ../sass/main.scss */
+  /* line 188, ../sass/main.scss */
   .tile {
     width: 9em;
     height: 9em;
   }
 
-  /* line 217, ../sass/main.scss */
+  /* line 193, ../sass/main.scss */
   .descriptionContainer {
     display: block;
   }
 
-  /* line 221, ../sass/main.scss */
+  /* line 197, ../sass/main.scss */
   .tileText {
     display: none;
   }
 
-  /* line 225, ../sass/main.scss */
+  /* line 201, ../sass/main.scss */
   .tileContainer {
     max-width: 36.5em;
   }
 
-  /* line 229, ../sass/main.scss */
+  /* line 205, ../sass/main.scss */
   .tile {
     display: inline-block;
+  }
+
+  /* line 208, ../sass/main.scss */
+  .list {
+    list-style-position: inside;
+    -moz-column-count: 2;
+    -moz-column-gap: 25px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 25px;
+    column-count: 2;
+    column-gap: 25px;
+  }
+
+  /* line 217, ../sass/main.scss */
+  .list > li {
+    display: list-item;
+  }
+}
+@media (min-width: 65.632em) {
+  /* line 223, ../sass/main.scss */
+  .circleImg {
+    display: block;
+  }
+
+  /* line 226, ../sass/main.scss */
+  .tileContainer:nth-child(2) {
+    background-color: red;
   }
 }
