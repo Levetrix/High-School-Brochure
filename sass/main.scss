@@ -15,7 +15,7 @@ body {
 	min-height:410px;
 	position:relative;
 	padding: 3em .769em;
-	
+	border-top:black 1px solid;
 }
 
 .one {
@@ -34,7 +34,7 @@ body {
 }
 
 .four {
-    background-color:#aaa;
+    background-color:white;
 }
 
 .headtext{
@@ -114,7 +114,6 @@ li {
     font-weight:200;
     text-align:left;
     display:block;
-    border-top: 1px solid black;
     color:black;
     margin-top:-1px;
     padding-top:8px;
@@ -161,12 +160,22 @@ p {
     line-height:1.3em;
 }
 
-.test1 {
-	text-align:left;
-}
+
 
 .tileText {
 	text-align:left;
+}
+
+.contactQuarter {
+    display:inline-block;
+    margin:0;
+    margin-right: $medium-gutter;
+}
+
+.contactHalf {
+	display:inline-block;
+	
+	
 }
 
 h4 {
@@ -181,10 +190,21 @@ h4 {
     text-align:left;
 	}
 	
+textarea {
+	margin:0;
+}
+	
 .contactAreaQuarter {
+	box-sizing:border-box;
 	width: $quarter-box;
 	height: $medium-gutter;
 	margin:0 $medium-gutter $medium-gutter 0 ;
+}
+
+
+#message {
+	width: 291px;
+	min-height: 3.5em;
 }
 
 .displayToggle {
@@ -202,6 +222,10 @@ h4 {
     
     .tileInvis1 {
     display:inline-block;
+    }
+    
+    #message {
+    width: $half-box;
     }
 }
 
@@ -230,6 +254,7 @@ h4 {
 	
 	.threeh2 {
     text-align:right;
+    border-top: 1px solid black;
 	}
 	
 	.tileContainer {
@@ -252,38 +277,6 @@ h4 {
 	max-width:1020px;
 	}
 }
-
-/* 
-@media (min-width: 58.56em) {
-	.tileContainer {
-       max-width:50em;
-       margin-left:auto;
-       margin-right:auto;
-    }
-    .list { 
-    list-style-position: inside;
-    -moz-column-count: 2;
-    -moz-column-gap: 25px;
-    -webkit-column-count: 2;
-    -webkit-column-gap: 25px;
-    column-count: 2;
-    column-gap: 25px;
-    }
-    .list > li {
-    display:list-item;
-    }
-}
-
-@media (min-width: 65.632em) {
-	.circleImg {
-	display:block;
-	}
-	
-	
-}
-
-
-*/
 
 
 
