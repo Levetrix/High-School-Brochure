@@ -1,3 +1,11 @@
+$medium-gutter: 32.24px;
+$small-gutter: 12.32px;
+$quarter-box: 221px;
+$half-box: 474.24;
+
+
+
+
 body {
 	padding:0;
 	margin:0;
@@ -6,7 +14,8 @@ body {
 .stripe {
 	min-height:410px;
 	position:relative;
-	padding:3em;
+	padding: 3em .769em;
+	
 }
 
 .one {
@@ -19,8 +28,9 @@ body {
 
 .three {
     text-align:center;
-    background-color:#888;
-    padding: 1.5em;
+    background-color:white;
+    padding-top: 1.5em;
+    padding-bottom:1.5em;
 }
 
 .four {
@@ -80,130 +90,175 @@ li {
 	
 }
 
-.threeh2 {
+.tileContainer {
+	display:block;
+	margin:0 auto;
 	text-align:center;
 }
 
-.tileContainer {
-	display:inline;
-	text-align:center;
+.floatTitle {
+	display:block;
+	width:13.8em;
+	margin-top:.769em;
+	background-color:rgba(255,255,255,.5);
+	margin-left:calc(50% - 126px);
+	border-top: solid white 1px;
+    margin-right:.769em;
+    
+}
+
+
+
+.threeh2 {
+	font-family:"calibri";
+    font-weight:200;
+    text-align:left;
+    display:block;
+    border-top: 1px solid black;
+    color:black;
+    margin-top:-1px;
+    padding-top:8px;
+    padding-bottom:.769em;
+    margin-bottom:0em;
 }
 
 .tile {
 	display:inline-block;
 	position:relative;
-	width:4.854101966249685em;
-	height:4.854101966249685em;
-	margin:1.5em;
-	background-color:#fff;
-	border:1px solid black;
+	width:13.8em;
+	height:8.538em;
+	margin-top:.769em;
+	margin-right:2.01em;
+    border-top:1px solid black;
+    padding-top: .769em;
+    overflow:auto;
 }
 
-.tileText{
-	text-align:center;
+    .tileInvis1 {
+    display:none;
+    }
+
+    .tileInvis {
+    display:none;
+    }
+
+
+h3 {
+	display:block;
+	min-height:2.5em;
+	font-size:1.05em;
+	margin:0;
+	font-weight:400;
+	font-family:calibri;
+	text-align:left;
+		
 }
 
-.descriptionContainer {
-	position:absolute;
-	bottom:0px;
-	width:100%;
-	height:20%;
-	border-top:1px solid black;
-	padding-bottom:0px;
+p {
+	text-align:left;	
+    font-family:Candara;
+    font-size:12px;
+    line-height:1.3em;
 }
 
-.description {
-	text-align:center
+.test1 {
+	text-align:left;
+}
+
+.tileText {
+	text-align:left;
+}
+
+h4 {
+	display:block;
+    font-size:1.05em;
+    margin-left:0px;
+    margin-right:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+    font-weight:400;
+    font-family:calibri;
+    text-align:left;
+	}
+	
+.contactAreaQuarter {
+	width: $quarter-box;
+	height: $medium-gutter;
+	margin:0 $medium-gutter $medium-gutter 0 ;
 }
 
 .displayToggle {
 	display:none;
 }
 
-/* @media desktop 
-
-.stripe {
-    padding-left: ;
-}
-
-.twoh2 {
-    margin-left:calc(50% - 420px);
-}
+/*--------------------------------
+--------------------------------*/
 
 
-.listHolder {
-    margin-top:2.8em;
-    width:700px;
-    margin-left:calc(50% - 400px);
-}
-
-.threeh2 {
-    margin-left:calc(50% - 400px)
-}
-
-.tileContainer {
-    position:relative;
-    margin-left:calc(50% - 400px);
-    width:900px;
-}
-
-.displayToggle {
-    display:default;
-}
-
-.list {
-    column-count:2;
-}
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 28.5em) and (max-width: 53.25em ) {
-	.tile {
-       width: 9em;
-       height: 9em;
-      
+@media (min-width: 548px) {
+    .floatTitle {
+    margin-left:calc(50% - 15.85em);
     }
     
-    .descriptionContainer {
-        display:block;
-    }
-    
-    .tileText {
-    display:none;
+    .tileInvis1 {
+    display:inline-block;
     }
 }
 
-@media (min-width: 53.315em) {
-	.tile {
-        width: 9em;
-        height: 9em;
+@media (min-width: 801px) {
+
+    .tile {
+    margin-right:2.01em;
+    display:inline-block;
+    }
+    
+    .tileInvis {
+    display:inline-block;
+    }
+
+    .floatTitle {
+    margin-left:calc(50% - 23.7em);
+    }
+}
+
+@media (min-width:1054px) {
+	.floatTitle {
+	float:left;
+	margin-left:0px;
+	margin-bottom:22em;
 	}
 	
-	.descriptionContainer {
-        display:block;
-    }
-    
-    .tileText {
-        display:none;
-    }
-    
-    .tileContainer {
-       max-width:36.5em;
-    }
-    
-    .tile {
-        display:inline-block;
+	.threeh2 {
+    text-align:right;
+	}
+	
+	.tileContainer {
+	max-width:1024px;
+	}
+}
+
+@media (min-width:1200px){
+	.tile {
+	margin-right:2.01em;
+	
+	}
+	
+	.floatTitle {
+	margin-right:2.01em;
+	
+	}
+	
+	.tileContainer {
+	max-width:1020px;
+	}
+}
+
+/* 
+@media (min-width: 58.56em) {
+	.tileContainer {
+       max-width:50em;
+       margin-left:auto;
+       margin-right:auto;
     }
     .list { 
     list-style-position: inside;
@@ -223,13 +278,12 @@ li {
 	.circleImg {
 	display:block;
 	}
-	.tileContainer:nth-child(2) {
-	background-color:red;
-	}
+	
+	
 }
 
 
-
+*/
 
 
 

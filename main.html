@@ -8,13 +8,14 @@
 <body>
 <nav></nav>
 <div class="stripe one">
+<a href="#Teacher-Dashboard">GO there</a>
    <p class="test"> <div class="headtext">
        <h1 class="headh1">Secondary Education Suite</h1>
        <h2 class="headh2">Awesome Text Here</h2>
    </div> </p>
 </div>
 <div class="stripe two">
-    <h2 class="mainh2 twoh2">Benefits of Secondary Education Suite</h2>
+    <h2 class="mainh2 twoh2" >Benefits of Secondary Education Suite</h2>
     <div class="circleImg"> <img src="" alt="" /> </div>
 	<div class="listHolder">
 	    <ul class="list">
@@ -29,113 +30,68 @@
         </ul>
 	</div>  
 </div>
-<div class="stripe three">
-    <h2 class="mainh2 threeh2">Key Features</h2>
-	<div class="tileContainer"> 
-	    <div class="tile">
-	    <p class="tileText">Teacher Dashboard</p>
-	        <div class="descriptionContainer displayToggle">
-	            <span class="description">Teacher Dashboard</span>
-	        </div>
-	    </div>
-	    <div class="tile">
-	    <p class="tileText">Teacher Dashboard</p>
-            <div class="descriptionContainer displayToggle">
-                <span class="description">Teacher Dashboard</span>
-            </div>
-        </div>
-        <div class="tile">
-        <p class="tileText">Teacher Dashboard</p>
-            <div class="descriptionContainer displayToggle">
-                <span class="description">Teacher Dashboard</span>
-            </div>
-        </div>
-        <div class="tile">
-        <p class="tileText">Teacher Dashboard</p>
-            <div class="descriptionContainer displayToggle">
-                <span class="description">Teacher Dashboard</span>
-            </div>
-        </div>
-        <div class="tile">
-        <p class="tileText">Teacher Dashboard</p>
-            <div class="descriptionContainer displayToggle">
-                <span class="description">Teacher Dashboard</span>
-            </div>
-        </div>
-        <div class="tile">
-        <p class="tileText">Teacher Dashboard</p>
-            <div class="descriptionContainer displayToggle">
-                <span class="description">Teacher Dashboard</span>
-            </div>
-        </div>
-        <div class="tile displayToggle">
-        <p class="tileText">Teacher Dashboard</p>
-            <div class="descriptionContainer displayToggle">
-                <span class="description">Teacher Dashboard</span>
-            </div>
-        </div>
-        <div class="tile displayToggle">
-        <p class="tileText">Teacher Dashboard</p>
-            <div class="descriptionContainer displayToggle">
-                <span class="description">Teacher Dashboard</span>
-            </div>
+<div class="stripe three" id="Teacher-Dashboard">
+    
+	<div class="tileContainer">
+	    <div class="floatTitle"><h2 class="threeh2" >Key Features</h2>
+	    </div><div class="tile">
+	       <h3>Teacher Dashboard</h3>
+	       <p >Lots and lots of tileText will go here. Russ will make all the tileText, just copy/paste when ready.</p>
+        </div><div class="tile">
+           <h3>Teacher <br /> Dashboard</h3>
+           <p >Lots and lots of tileText will go here. Russ will make all the tileText, just copy/paste when ready.</p>
+        </div><div class="tile">
+           <h3>Teacher <br /> Dashboard</h3>
+           <p >Lots and lots of tileText will go here. Russ will make all the tileText, just copy/paste when ready.</p>
+        </div><div class="tile">
+           <h3>Teacher <br /> Dashboard</h3>
+           <p >Lots and lots of tileText will go here. Russ will make all the tileText, just copy/paste when ready.</p>
+        </div><div class="tileInvis1 tile">
+           <h3>Teacher Dashboard</h3>
+           <p >Lots and lots of tileText will go here. Russ will make all the tileText, just copy/paste when ready.</p>
+        </div><div class="tileInvis1 tile">
+           <h3>Teacher Dashboard</h3>
+           <p >Lots and lots of tileText will go here. Russ will make all the tileText, just copy/paste when ready.</p>
+        </div><div class="tileInvis tile">
+          <h3>Teacher <br /> Dashboard</h3>
+           <p >Lots and lots of tileText will go here. Russ will make all the tileText, just copy/paste when ready.</p>
+        </div><div class="tileInvis tile">
+           <h3>Teacher Dashboard</h3>
+           <p >Lots and lots of tileText will go here. Russ will make all the tileText, just copy/paste when ready.</p>
+        </div><div class="tileInvis tile">
+           <h3>Teacher <br /> Dashboard</h3>
+           <p >Lots and lots of tileText will go here. Russ will make all the tileText, just copy/paste when ready.</p>
         </div>
 	</div>
 </div>
 <div class="stripe four">
-    <form name="htmlform" method="post" action="html_form_send.php">
-		<table >
-		<tr>
-		<tr>
-		 <td valign="top">
-		  <label for="first_name">First Name *</label>
-		 </td>
-		 <td valign="top">
-		  <input  type="text" name="first_name" >
-		 </td>
-		</tr>
-		 
-		<tr>
-		 <td valign="top">
-		  <label for="last_name">Last Name *</label>
-		 </td>
-		 <td valign="top">
-		  <input  type="text" name="last_name" >
-		 </td>
-		</tr>
-		<tr>
-		 <td valign="top">
-		  <label for="email">Email Address *</label>
-		 </td>
-		 <td valign="top">
-		  <input  type="text" name="email">
-		 </td>
-		 
-		</tr>
-		<tr>
-		 <td valign="top">
-		  <label for="telephone">Telephone Number</label>
-		 </td>
-		 <td valign="top">
-		  <input  type="text" name="telephone">
-		 </td>
-		</tr>
-		<tr>
-		 <td valign="top">
-		  <label for="comments">Comments *</label>
-		 </td>
-		 <td valign="top">
-		  <textarea  name="comments"></textarea>
-		 </td>
-		 
-		</tr>
-		<tr>
-		 <td colspan="2">
-		  <input type="submit" value="Submit">
-		 </td>
-		</tr>
-		</table>
-	</form>
+    
+    <form name="contactForm" id="contactForm" method="post" action="insert.php">
+	    <div class="contactQuarter">
+	        <h4>Name:</h4>
+	        <input class="contactAreaQuarter" type="text" placeholder="..." name="name" id="name" required autofocus>
+	    </div>
+	         
+	    <div class="contactQuarter">
+	        <h4>School/District:</h4>
+	        <input class="contactAreaQuarter" type="text" placeholder="..." name="city" id="city" required>
+	    </div>
+	         
+	    <div class="contactQuarter">
+	        <h4>Phone:</h4>
+	        <input class="contactAreaQuarter" type="tel" placeholder="..." name="phone" id="phone">
+	    </div>
+	         
+	    <div class="contactQuarter">
+	        <h4>Email:</h4>
+	        <input class="contactAreaQuarter" type="email" placeholder="..." name="email" id="email" required>
+	    </div>
+	     
+	    <div class="contactHalf">
+	        <h4>Message:</h4>
+	        <textarea class="contactAreaHalf" name="text" id="message" placeholder="..."></textarea>
+        </div>
+     </form>
 </div>
 
 
