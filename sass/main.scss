@@ -209,6 +209,11 @@ p {
 	text-align:center;
 }
 
+.contactTitle {
+	border-bottom:1px solid black;
+	padding-bottom:31px;
+}
+
 .contactQuarter {
     display:inline-block;
     margin:0;
@@ -359,6 +364,21 @@ textarea {
 }
 
 @media (min-width:1054px) {
+	.floatInfo {
+	margin-top:48px;
+	}
+	
+	.topRow {
+	padding-top:15px;
+	}
+	
+	#contactForm {
+	}
+	
+	.contactTitle {
+	border-bottom:none;
+	}
+	
 	.listContainer {
 	min-height:265px;
 	}
