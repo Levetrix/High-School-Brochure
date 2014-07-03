@@ -9,20 +9,19 @@ body {
   min-height: 410px;
   position: relative;
   padding: 3em .769em;
-  border-top: black 1px solid;
 }
 
-/* line 21, ../sass/main.scss */
+/* line 20, ../sass/main.scss */
 .one {
   background-color: #ccc;
 }
 
-/* line 25, ../sass/main.scss */
+/* line 24, ../sass/main.scss */
 .two {
-  background-color: #aaa;
+  min-height: 200px;
 }
 
-/* line 29, ../sass/main.scss */
+/* line 28, ../sass/main.scss */
 .three {
   text-align: center;
   background-color: white;
@@ -30,40 +29,40 @@ body {
   padding-bottom: 1.5em;
 }
 
-/* line 36, ../sass/main.scss */
+/* line 35, ../sass/main.scss */
 .four {
   background-color: white;
 }
 
-/* line 40, ../sass/main.scss */
+/* line 39, ../sass/main.scss */
 .headtext {
   text-align: right;
 }
 
-/* line 44, ../sass/main.scss */
+/* line 43, ../sass/main.scss */
 .test {
   display: block;
   text-align: right;
 }
 
-/* line 49, ../sass/main.scss */
+/* line 48, ../sass/main.scss */
 .headh1 {
   font-size: 1.9em;
 }
 
-/* line 53, ../sass/main.scss */
+/* line 52, ../sass/main.scss */
 .headh2 {
   font-size: 1.4em;
 }
 
-/* line 57, ../sass/main.scss */
+/* line 56, ../sass/main.scss */
 .mainh2 {
   font-size: 1.4em;
   display: block;
   orphans: 3;
 }
 
-/* line 67, ../sass/main.scss */
+/* line 66, ../sass/main.scss */
 .circleImg {
   display: none;
   position: absolute;
@@ -74,25 +73,55 @@ body {
   background-color: #000;
 }
 
-/* line 77, ../sass/main.scss */
-.listHolder {
-  margin-top: 2.8em;
-  max-width: 45em;
+/* line 76, ../sass/main.scss */
+.list li {
+  display: list-item;
+  padding: 0;
+  padding-bottom: 32.24px;
+  margin-left: -2.4em;
+  list-style: none;
 }
 
 /* line 84, ../sass/main.scss */
-li {
-  padding-top: 30px;
+.list li:before {
+  content: "\003E \020";
+  font-family: "consolas";
+  font-weight: 200;
+  margin-left: -.17em;
+  width: 0.8em;
 }
 
-/* line 93, ../sass/main.scss */
+/* line 92, ../sass/main.scss */
+.list {
+  border-top: black solid 1px;
+  display: inline-block;
+  text-align: left;
+  font-family: calibri;
+  margin-top: 0;
+  padding-top: 12.32px;
+  list-style-type: circle;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  margin-right: 28px;
+  max-width: 181px;
+  overflow: visible;
+}
+
+/* line 108, ../sass/main.scss */
+.listHidden {
+  display: none;
+  margin-right: 0;
+}
+
+/* line 113, ../sass/main.scss */
 .tileContainer {
   display: block;
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 99, ../sass/main.scss */
+/* line 119, ../sass/main.scss */
 .floatTitle {
   display: block;
   width: 13.8em;
@@ -103,7 +132,7 @@ li {
   margin-right: .769em;
 }
 
-/* line 112, ../sass/main.scss */
+/* line 132, ../sass/main.scss */
 .threeh2 {
   font-family: "calibri";
   font-weight: 200;
@@ -116,7 +145,7 @@ li {
   margin-bottom: 0em;
 }
 
-/* line 124, ../sass/main.scss */
+/* line 145, ../sass/main.scss */
 .tile {
   display: inline-block;
   position: relative;
@@ -129,17 +158,28 @@ li {
   overflow: auto;
 }
 
-/* line 136, ../sass/main.scss */
+/* line 157, ../sass/main.scss */
+.listContainer {
+  padding: 0;
+  max-width: 759.48px;
+  text-align: left;
+  margin-top: 12.32px;
+  overflow: visible;
+  border-top: none;
+  min-height: 265px;
+}
+
+/* line 167, ../sass/main.scss */
 .tileInvis1 {
   display: none;
 }
 
-/* line 140, ../sass/main.scss */
+/* line 171, ../sass/main.scss */
 .tileInvis {
   display: none;
 }
 
-/* line 145, ../sass/main.scss */
+/* line 176, ../sass/main.scss */
 h3 {
   display: block;
   min-height: 2.5em;
@@ -150,7 +190,7 @@ h3 {
   text-align: left;
 }
 
-/* line 156, ../sass/main.scss */
+/* line 187, ../sass/main.scss */
 p {
   text-align: left;
   font-family: Candara;
@@ -158,24 +198,44 @@ p {
   line-height: 1.3em;
 }
 
-/* line 165, ../sass/main.scss */
+/* line 194, ../sass/main.scss */
 .tileText {
   text-align: left;
 }
 
-/* line 169, ../sass/main.scss */
+/* line 198, ../sass/main.scss */
+.floatInfo {
+  display: none;
+  float: right;
+  margin-right: 32.24px;
+  border: 1px solid darkgrey;
+  width: 221px;
+  min-height: 12.6em;
+  margin-top: 33px;
+}
+
+/* line 208, ../sass/main.scss */
+.infoText {
+  text-align: center;
+}
+
+/* line 212, ../sass/main.scss */
 .contactQuarter {
   display: inline-block;
   margin: 0;
   margin-right: 32.24px;
+  margin-top: 12.32px;
 }
 
-/* line 175, ../sass/main.scss */
+/* line 219, ../sass/main.scss */
 .contactHalf {
   display: inline-block;
+  margin: 0;
+  margin-right: 32.24px;
+  margin-top: 12.32px;
 }
 
-/* line 181, ../sass/main.scss */
+/* line 228, ../sass/main.scss */
 h4 {
   display: block;
   font-size: 1.05em;
@@ -188,26 +248,25 @@ h4 {
   text-align: left;
 }
 
-/* line 193, ../sass/main.scss */
+/* line 240, ../sass/main.scss */
 textarea {
   margin: 0;
 }
 
-/* line 197, ../sass/main.scss */
+/* line 244, ../sass/main.scss */
 .contactAreaQuarter {
   box-sizing: border-box;
-  width: 221px;
+  width: 219px;
   height: 32.24px;
-  margin: 0 32.24px 32.24px 0;
 }
 
-/* line 205, ../sass/main.scss */
+/* line 251, ../sass/main.scss */
 #message {
-  width: 291px;
+  width: 221px;
   min-height: 3.5em;
 }
 
-/* line 210, ../sass/main.scss */
+/* line 257, ../sass/main.scss */
 .displayToggle {
   display: none;
 }
@@ -215,70 +274,125 @@ textarea {
 /*--------------------------------
 --------------------------------*/
 @media (min-width: 548px) {
-  /* line 219, ../sass/main.scss */
+  /* line 268, ../sass/main.scss */
+  .list .liToggle {
+    display: none;
+  }
+
+  /* line 276, ../sass/main.scss */
+  .listHidden {
+    display: inline-block;
+  }
+
+  /* line 280, ../sass/main.scss */
+  .listContainer {
+    min-width: 474px;
+  }
+
+  /* line 284, ../sass/main.scss */
   .floatTitle {
     margin-left: calc(50% - 15.85em);
   }
 
-  /* line 223, ../sass/main.scss */
+  /* line 288, ../sass/main.scss */
   .tileInvis1 {
     display: inline-block;
   }
 
-  /* line 227, ../sass/main.scss */
+  /* line 292, ../sass/main.scss */
   #message {
     width: 474.24;
+    min-height: 5.5em;
   }
 }
 @media (min-width: 801px) {
-  /* line 234, ../sass/main.scss */
+  /* line 299, ../sass/main.scss */
+  .threeh2list {
+    text-align: left;
+    border-top: 1px solid black;
+  }
+
+  /* line 304, ../sass/main.scss */
+  .listTitle {
+    float: left;
+    margin-left: 0px;
+    margin-bottom: 100px;
+  }
+
+  /* line 312, ../sass/main.scss */
+  .listContainer {
+    min-width: 727.32px;
+    min-height: 265px;
+    padding: 0;
+  }
+
+  /* line 318, ../sass/main.scss */
+  ul .displayToggle {
+    display: list-item;
+  }
+
+  /* line 331, ../sass/main.scss */
   .tile {
     margin-right: 2.01em;
     display: inline-block;
   }
 
-  /* line 239, ../sass/main.scss */
+  /* line 336, ../sass/main.scss */
   .tileInvis {
     display: inline-block;
   }
 
-  /* line 243, ../sass/main.scss */
+  /* line 340, ../sass/main.scss */
   .floatTitle {
     margin-left: calc(50% - 23.7em);
   }
+
+  /* line 344, ../sass/main.scss */
+  .floatInfo {
+    display: inline-block;
+  }
+
+  /* line 348, ../sass/main.scss */
+  .info {
+    display: none;
+  }
+
+  /* line 352, ../sass/main.scss */
+  .tileContainer {
+    max-width: 763px;
+  }
+
+  /* line 356, ../sass/main.scss */
+  .listTileContainer {
+    max-width: 250px;
+  }
 }
 @media (min-width: 1054px) {
-  /* line 249, ../sass/main.scss */
+  /* line 362, ../sass/main.scss */
+  .listContainer {
+    min-height: 265px;
+  }
+
+  /* line 366, ../sass/main.scss */
   .floatTitle {
     float: left;
     margin-left: 0px;
     margin-bottom: 22em;
   }
 
-  /* line 255, ../sass/main.scss */
+  /* line 372, ../sass/main.scss */
+  .listTitle {
+    margin-bottom: 100px;
+  }
+
+  /* line 376, ../sass/main.scss */
   .threeh2 {
     text-align: right;
     border-top: 1px solid black;
   }
 
-  /* line 260, ../sass/main.scss */
+  /* line 381, ../sass/main.scss */
   .tileContainer {
     max-width: 1024px;
-  }
-}
-@media (min-width: 1200px) {
-  /* line 266, ../sass/main.scss */
-  .tile {
-    margin-right: 2.01em;
-  }
-
-  /* line 271, ../sass/main.scss */
-  .floatTitle {
-    margin-right: 2.01em;
-  }
-
-  /* line 276, ../sass/main.scss */
-  .tileContainer {
-    max-width: 1020px;
   }
 }

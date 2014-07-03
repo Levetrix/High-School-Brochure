@@ -15,7 +15,6 @@ body {
 	min-height:410px;
 	position:relative;
 	padding: 3em .769em;
-	border-top:black 1px solid;
 }
 
 .one {
@@ -23,7 +22,7 @@ body {
 }
 
 .two {
-    background-color:#aaa;
+	min-height:200px;
 }
 
 .three {
@@ -74,20 +73,41 @@ body {
 	background-color:#000;
 }
 
-.listHolder {
-	margin-top:2.8em;
-	max-width:45em;
+.list li {
+	display:list-item;
+	padding:0;
+	padding-bottom:$medium-gutter;
+	margin-left:-2.4em;
+	list-style: none;
 	
 }
-
-
-li {
-	padding-top:30px;
-	
+.list li:before {
+ content: "\003E \020";
+ font-family:"consolas";
+ font-weight:200;
+ margin-left:-.17em;
+ width: 0.8em;
 }
 
 .list {
-	
+	border-top:black solid 1px;
+	display:inline-block;
+	text-align:left;
+	font-family:calibri;
+	margin-top:0;
+	padding-top:$small-gutter;
+	list-style-type:circle;
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em; 
+    -webkit-margin-start: 0px;
+    margin-right:28px;
+    max-width:181px;
+    overflow:visible;
+}
+
+.listHidden {
+	display:none;
+	margin-right:0;
 }
 
 .tileContainer {
@@ -121,6 +141,7 @@ li {
     margin-bottom:0em;
 }
 
+
 .tile {
 	display:inline-block;
 	position:relative;
@@ -131,6 +152,16 @@ li {
     border-top:1px solid black;
     padding-top: .769em;
     overflow:auto;
+}
+
+.listContainer {
+    padding:0;
+    max-width:759.48px;
+    text-align:left;
+    margin-top:$small-gutter;
+    overflow:visible;
+    border-top:none;
+    min-height:265px;
 }
 
     .tileInvis1 {
@@ -160,34 +191,50 @@ p {
     line-height:1.3em;
 }
 
-
-
 .tileText {
 	text-align:left;
+}
+
+.floatInfo {
+	display:none;
+	float:right;
+	margin-right: $medium-gutter;
+	border:1px solid darkgrey;
+	width:$quarter-box;
+	min-height:12.6em;
+	margin-top:33px;
+}
+
+.infoText {
+	text-align:center;
 }
 
 .contactQuarter {
     display:inline-block;
     margin:0;
     margin-right: $medium-gutter;
+    margin-top: $small-gutter;
 }
 
 .contactHalf {
-	display:inline-block;
-	
+	display: inline-block;
+	margin: 0;
+	margin-right: 32.24px;
+    margin-top: $small-gutter;
+		
 	
 }
 
 h4 {
-	display:block;
-    font-size:1.05em;
-    margin-left:0px;
-    margin-right:0px;
-    margin-top:0px;
-    margin-bottom:0px;
-    font-weight:400;
-    font-family:calibri;
-    text-align:left;
+	display: block;
+	font-size: 1.05em;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-weight: 400;
+	font-family: calibri;
+	text-align: left;
 	}
 	
 textarea {
@@ -196,16 +243,16 @@ textarea {
 	
 .contactAreaQuarter {
 	box-sizing:border-box;
-	width: $quarter-box;
+	width: 219px;
 	height: $medium-gutter;
-	margin:0 $medium-gutter $medium-gutter 0 ;
 }
 
 
 #message {
-	width: 291px;
+	width: 221px;
 	min-height: 3.5em;
 }
+
 
 .displayToggle {
 	display:none;
@@ -213,9 +260,27 @@ textarea {
 
 /*--------------------------------
 --------------------------------*/
+@media (min-width: 404px) {
 
+}
 
-@media (min-width: 548px) {
+@media (min-width: 548px) {    
+	.list .liToggle {
+    display:none;
+    }
+    
+    .list {
+	
+	}
+	
+    .listHidden {
+    display:inline-block;
+    }
+    
+    .listContainer {
+    min-width:474px;
+    }
+    
     .floatTitle {
     margin-left:calc(50% - 15.85em);
     }
@@ -226,11 +291,43 @@ textarea {
     
     #message {
     width: $half-box;
+    min-height:5.5em;
     }
 }
 
 @media (min-width: 801px) {
+    .threeh2list {
+    text-align:left;
+    border-top: 1px solid black;
+    }
+    
+    .listTitle {
+    float:left;
+    margin-left:0px;
+    margin-bottom:100px;
+    }
+    
+   
+    
+	.listContainer{
+	min-width:727.32px;
+	min-height:265px;
+	padding:0;
+	}
+	
+	ul .displayToggle {
+	display:list-item;
+	}
 
+	
+	.list {
+	
+	}
+	
+	.listContainer {
+	
+    }
+	
     .tile {
     margin-right:2.01em;
     display:inline-block;
@@ -243,15 +340,39 @@ textarea {
     .floatTitle {
     margin-left:calc(50% - 23.7em);
     }
+
+    .floatInfo {
+    display:inline-block;
+    }
+    
+    .info {
+    display:none;
+    }
+    
+    .tileContainer {
+    max-width:763px;
+    }
+    
+     .listTileContainer {
+    max-width:250px;
+    }
 }
 
 @media (min-width:1054px) {
+	.listContainer {
+	min-height:265px;
+	}
+	
 	.floatTitle {
 	float:left;
 	margin-left:0px;
 	margin-bottom:22em;
 	}
 	
+	.listTitle {
+	    margin-bottom:100px;
+	}
+		
 	.threeh2 {
     text-align:right;
     border-top: 1px solid black;
@@ -264,17 +385,14 @@ textarea {
 
 @media (min-width:1200px){
 	.tile {
-	margin-right:2.01em;
 	
 	}
 	
 	.floatTitle {
-	margin-right:2.01em;
 	
 	}
 	
 	.tileContainer {
-	max-width:1020px;
 	}
 }
 

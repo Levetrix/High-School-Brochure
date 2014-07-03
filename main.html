@@ -7,6 +7,7 @@
 </head>
 <body>
 <nav></nav>
+<div class="maincontent">
 <div class="stripe one">
 <a href="#Teacher-Dashboard">GO there</a>
    <p class="test"> <div class="headtext">
@@ -15,19 +16,27 @@
    </div> </p>
 </div>
 <div class="stripe two">
-    <h2 class="mainh2 twoh2" >Benefits of Secondary Education Suite</h2>
-    <div class="circleImg"> <img src="" alt="" /> </div>
-	<div class="listHolder">
-	    <ul class="list">
-	        <li>Affordable Quality Courses</li>
-	        <li>Award Winning Content</li>
-	        <li>Pace and Performance Analytics</li>
-	        <li>Free Student-Teacher Assistance</li>
-            <li>Affordable Quality Courses</li>
-            <li class="displayToggle">Free Student-Teacher Assistance</li>
-            <li class="displayToggle">Pace and Performance Analytics</li>
-            <li class="displayToggle">Free Student-Teacher Assistance</li>
-        </ul>
+     <div class="listTileContainer tileContainer">
+    
+        <div class="listTitle floatTitle"><h2 class="threeh2list threeh2" >Benefits of Secondary Education Suite</h2>
+        </div>
+        
+        <div class="listContainer tile">
+	        <ul class="list">
+	            <li>Affordable Quality Courses</li>
+	            <li>Award Winning Content</li>
+	            <li>Pace and Performance Analytics</li>
+	            <li>Free Student-Teacher Assistance</li>
+	            <li class="liToggle">Affordable Quality Courses</li>
+	        </ul>
+	        <ul class="list listHidden">
+                <li>Affordable Quality Courses</li>
+                <li>Award Winning Content</li>
+                <li>Pace and Performance Analytics</li>
+                <li>Free Student-Teacher Assistance</li>
+            </ul>
+        </div>
+   
 	</div>  
 </div>
 <div class="stripe three" id="Teacher-Dashboard">
@@ -69,6 +78,20 @@
     
         <div class="floatTitle"><h2 class="threeh2" >Request Info</h2>
         </div>
+        <div class="floatInfo">
+            <p class="infoText">
+            <a href=mailto"me@you.com">info@byuis.com</a><br>
+            <br>
+            Mailing Information:<br>
+            BYU Independent Study<br>
+            120 Morris Center<br>
+            Provo, UT 84602-0300<br>
+            <br>
+            Phone Contact Info:<br>
+            1-801-422-2868<br>
+            1-800-914-8931      
+            </p>
+        </div>
         
         <form name="contactForm" id="contactForm" method="post" action="insert.php">
 		    <div class="contactQuarter">
@@ -96,6 +119,8 @@
 		        <textarea class="contactAreaHalf" name="text" id="message" placeholder="..."></textarea>
 	        </div>
 	     </form>
+        
+        
      </div>
 </div>
 
@@ -112,6 +137,6 @@
 
 
 
-
+</div>
 </body>
 </html>
