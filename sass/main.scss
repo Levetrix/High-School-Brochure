@@ -38,6 +38,7 @@ body {
 
 .headtext{
 	text-align:right;
+	margin-right: $medium-gutter;
 }
 
 .test {
@@ -47,10 +48,14 @@ body {
 
 .headh1 {
 	font-size:1.9em;
+	font-family:calibri;
+	font-weight:200;
 }
 
 .headh2 {
 	font-size:1.4em;
+    font-family:calibri;
+    font-weight:200;
 }
 
 .mainh2 {
@@ -81,12 +86,15 @@ body {
 	list-style: none;
 	
 }
+
 .list li:before {
  content: "\003E \020";
  font-family:"consolas";
  font-weight:200;
  margin-left:-.17em;
  width: 0.8em;
+ float:left;
+ margin-bottom:.1em;
 }
 
 .list {
