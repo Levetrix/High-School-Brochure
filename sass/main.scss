@@ -2,17 +2,30 @@ $medium-gutter: 32.24px;
 $small-gutter: 12.32px;
 $quarter-box: 221px;
 $half-box: 474.24;
+$myblue: #66B9E3;
 
+@font-face {
+    font-family: "OpenSansCn";
+    src: url(../fonts/OpenSans-CondLight.ttf);
+}
 
+@font-face {
+    font-family: "OpenSans";
+    src: url(../fonts/opensans-light-webfont.woff);
+}
 
-
+@font-face {
+    font-family: "Serveroff";
+    src: url(../fonts/Web_Serveroff.otf);
+}
+ 
 body {
 	padding:0;
 	margin:0;
+	color:rgb(70,70,70);
 }
 
 .stripe {
-	min-height:410px;
 	position:relative;
 	padding: 3em .769em;
 }
@@ -22,7 +35,7 @@ body {
 }
 
 .two {
-	min-height:200px;
+	min-height:450px;
 }
 
 .three {
@@ -48,13 +61,14 @@ body {
 
 .headh1 {
 	font-size:1.9em;
-	font-family:calibri;
+	font-family:"OpenSans";
 	font-weight:200;
 }
 
 .headh2 {
 	font-size:1.4em;
     font-family:calibri;
+    font-family: "OpenSans";
     font-weight:200;
 }
 
@@ -81,6 +95,7 @@ body {
 .list li {
 	display:list-item;
 	padding:0;
+	font-family: "OpenSans";
 	padding-bottom:$medium-gutter;
 	margin-left:-2.4em;
 	list-style: none;
@@ -91,19 +106,20 @@ body {
  content: "\003E \020";
  font-family:"consolas";
  font-weight:200;
+ font-size: .8em;
+ padding-top:.2em;
  margin-left:-.17em;
  width: 0.8em;
  float:left;
- margin-bottom:.1em;
+ margin-bottom:.5em;
 }
 
 .list {
-	border-top:black solid 1px;
+	border-top:rgb(168,168,168) solid 1px;
 	display:inline-block;
 	text-align:left;
-	font-family:calibri;
 	margin-top:0;
-	padding-top:$small-gutter;
+	padding-top:15px;
 	list-style-type:circle;
 	-webkit-margin-before: 0em;
     -webkit-margin-after: 0em; 
@@ -138,13 +154,14 @@ body {
 
 
 .threeh2 {
-	font-family:"calibri";
+	font-family:"OpenSans";
     font-weight:200;
+    font-size:1.4em;
     text-align:left;
     display:block;
-    color:black;
+    color:rgb(100,100,100);
     margin-top:-1px;
-    padding-top:8px;
+    padding-top:7px;
     padding-bottom:.769em;
     margin-bottom:0em;
 }
@@ -157,7 +174,7 @@ body {
 	height:8.538em;
 	margin-top:.769em;
 	margin-right:2.01em;
-    border-top:1px solid black;
+    border-top:1px solid rgb(168,168,168);
     padding-top: .769em;
     overflow:auto;
 }
@@ -187,14 +204,15 @@ h3 {
 	font-size:1.05em;
 	margin:0;
 	font-weight:400;
-	font-family:calibri;
+	font-family:"OpenSans";
 	text-align:left;
 		
 }
 
+
 p {
 	text-align:left;	
-    font-family:Candara;
+    font-family:"OpenSans";
     font-size:12px;
     line-height:1.3em;
 }
@@ -218,7 +236,7 @@ p {
 }
 
 .contactTitle {
-	border-bottom:1px solid black;
+	border-bottom:1px solid rgb(168,168,168);
 	padding-bottom:31px;
 }
 
@@ -234,8 +252,11 @@ p {
 	margin: 0;
 	margin-right: 32.24px;
     margin-top: $small-gutter;
-		
-	
+}
+
+input {
+    font-family:"OpenSans";
+    border:rgb(168,168,168) 1px solid;
 }
 
 h4 {
@@ -246,12 +267,22 @@ h4 {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	font-weight: 400;
-	font-family: calibri;
+	font-family: "OpenSans";
 	text-align: left;
 	}
 	
 textarea {
 	margin:0;
+	font-family:"OpenSans";
+    border:rgb(168,168,168) 1px solid;
+}
+
+input:focus {
+	border: 1px solid $myblue;
+}
+
+textarea:focus {
+    border: 1px solid $myblue;
 }
 	
 .contactAreaQuarter {
@@ -271,6 +302,24 @@ textarea {
 	display:none;
 }
 
+.button {
+	float:left;
+	color:rgb(70,70,70);
+	height:32.24px;
+	width:110px;
+	border: 1px solid rgb(168,168,168);
+	font-family:"OpenSans";
+	margin-left:calc(50% - 127px);
+	line-height:2em;
+	margin-bottom:2em;
+	text-decoration:none;
+}
+
+.button:hover {
+    border: 1px solid $myblue;
+    color:$myblue;
+}
+
 /*--------------------------------
 --------------------------------*/
 @media (min-width: 404px) {
@@ -278,6 +327,10 @@ textarea {
 }
 
 @media (min-width: 548px) {    
+	.two {
+	min-height:0px;
+	}
+	
 	.list .liToggle {
     display:none;
     }
@@ -298,6 +351,10 @@ textarea {
     margin-left:calc(50% - 15.85em);
     }
     
+    .button {
+    margin-left:calc(50% - 15.85em);
+    }
+    
     .tileInvis1 {
     display:inline-block;
     }
@@ -309,9 +366,12 @@ textarea {
 }
 
 @media (min-width: 801px) {
+	.two {
+	}
+	
     .threeh2list {
     text-align:left;
-    border-top: 1px solid black;
+    border-top: 1px solid rgb(168,168,168);
     }
     
     .listTitle {
@@ -351,7 +411,11 @@ textarea {
     }
 
     .floatTitle {
-    margin-left:calc(50% - 23.7em);
+    margin-left:calc(50% - 23.85em);
+    }
+    
+    .button {
+    margin-left:calc(50% - 23.85em);
     }
 
     .floatInfo {
@@ -373,7 +437,6 @@ textarea {
 
 @media (min-width:1054px) {
 	.floatInfo {
-	margin-top:48px;
 	}
 	
 	.topRow {
@@ -397,13 +460,17 @@ textarea {
 	margin-bottom:22em;
 	}
 	
+	.button {
+	margin-left:calc(50% - 31.1em);
+	}
+	
 	.listTitle {
 	    margin-bottom:100px;
 	}
 		
 	.threeh2 {
     text-align:right;
-    border-top: 1px solid black;
+    border-top: 1px solid rgb(168,168,168);
 	}
 	
 	.tileContainer {
