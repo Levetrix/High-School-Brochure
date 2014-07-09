@@ -213,8 +213,8 @@ h3 {
 p {
 	text-align:left;	
     font-family:"OpenSans";
-    font-size:12px;
-    line-height:1.3em;
+    font-size:13px;
+    line-height:1.5em;
 }
 
 .tileText {
@@ -225,14 +225,20 @@ p {
 	display:none;
 	float:right;
 	margin-right: $medium-gutter;
-	border:1px solid darkgrey;
 	width:$quarter-box;
 	min-height:12.6em;
-	margin-top:33px;
+	margin-top:12.32px;
+	padding:0;
+	text-align:left
 }
 
 .infoText {
-	text-align:center;
+	font-family:"OpenSans";
+	font-size:1.05em;
+}
+
+.mailLink {
+	color: $myblue;
 }
 
 .contactTitle {
@@ -257,6 +263,7 @@ p {
 input {
     font-family:"OpenSans";
     border:rgb(168,168,168) 1px solid;
+    padding-left:.5em;
 }
 
 h4 {
@@ -275,6 +282,7 @@ textarea {
 	margin:0;
 	font-family:"OpenSans";
     border:rgb(168,168,168) 1px solid;
+    padding-left:.5em;
 }
 
 input:focus {
@@ -326,7 +334,7 @@ textarea:focus {
 
 }
 
-@media (min-width: 548px) {    
+@media (min-width: 535px) {    
 	.two {
 	min-height:0px;
 	}
@@ -361,11 +369,11 @@ textarea:focus {
     
     #message {
     width: $half-box;
-    min-height:5.5em;
+    min-height:5.15em;
     }
 }
 
-@media (min-width: 801px) {
+@media (min-width: 784px) {
 	.two {
 	}
 	
@@ -437,6 +445,7 @@ textarea:focus {
 
 @media (min-width:1054px) {
 	.floatInfo {
+	margin-top:27px;
 	}
 	
 	.topRow {
