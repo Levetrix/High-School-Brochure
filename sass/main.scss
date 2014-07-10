@@ -1,9 +1,18 @@
+/*@import "compass/css3";*/
+
+@import "foundation/components/offcanvas";
+
 $medium-gutter: 32.24px;
 $small-gutter: 12.32px;
 $quarter-box: 221px;
 $half-box: 474.24;
 $mygreen: rgb(125,224,159);
 $myblue: #66B9E3;
+
+$topbar-height: 65px;
+$topbar-link-font-size: rem-calc(15);
+$tabbar-height: rem-calc(65);
+$tabbar-hamburger-icon-top: rem-calc(16);
 
 @font-face {
     font-family: "OpenSansCn";
@@ -26,6 +35,27 @@ body {
 	color:rgb(70,70,70);
 	font-family:"OpenSans";
 }
+
+/*.menu-sidebar {
+  @include display-box;
+  @include box-orient(horizontal);
+  @include box-align(stretch);
+  @include box-direction(reverse);
+  height: 200px;
+  width: 100%;
+  .content, .sidebar {
+    padding: 20px;
+  }
+  .content {
+    @include box-flex(4);
+    background-color: #c5c1b4;
+  }
+  .sidebar {
+    @include box-flex(1);
+    background-color: #375f99;
+    margin-right: 1px;
+  }
+}*/
 
 .stripe {
 	position:relative;

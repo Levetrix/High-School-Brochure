@@ -3,10 +3,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheets/main.css" type="text/css" />
     <!--  this is a test  -->
-
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation/foundation.js"></script>
+	<script src="js/foundation/foundation.offcanvas.js"></script>
+	<!-- Other JS plugins can be included here -->
+	
+	<script>
+	  $(document).foundation();
+	  $(document).ready(function (){
+		  $('.off-canvas-wrap').bind("click", function() {
+			  $('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'move-right');
+		  });
+	  });
+	</script>
 </head>
 <body>
+<<<<<<< HEAD
  
+=======
+
+<!-- OFF CANVAS SECTIONS WRAPPING THE MAIN CONTENT -->
+<div class="off-canvas-wrap">
+    <div class="inner-wrap">
+ 
+        <!-- OFF CANVAS MENU BAR -->
+        <nav class="tab-bar hide-for-large-up">
+ 
+            <section class="left-small">
+                <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+            </section>
+            <section class="right tab-bar-section">
+                <h1 class="title">Independent Study</h1>
+            </section>
+ 
+        </nav> <!-- END NAV.TAB-BAR HIDE-FOR-LARGE-UP -->
+ 
+        <!-- OFF CANVAS MENU -->
+        <aside class="left-off-canvas-menu">
+            <ul class="off-canvas-list">
+                <li><label>Navigation</label></li>
+                <li><a href="http://is.byu.edu">Menu Option 1</a></li>
+            </ul>
+            <ul class="off-canvas-list">
+                <li><label>List 1</label></li>
+                <!-- <li class="has-dropdown"><a href="http://is.byu.edu">Menu List 1</a> -->
+                    <ul class="off-canvas-list">
+		                <li><a href="http://is.byu.edu">Menu List 1 Option 1</a></li>
+		                <li><a href="http://is.byu.edu">Menu List 1 Option 2</a></li>
+		                <li><a href="http://is.byu.edu">Menu List 1 Option 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="off-canvas-list">
+                <li><label>List 2</label></li>
+                <!-- <li class="has-dropdown"><a href="page.html">Menu List 2</a> -->
+                    <ul class="off-canvas-list">
+		                <li><a href="http://is.byu.edu">Menu List 2 Option 1</a></li>
+		                <li><a href="http://is.byu.edu">Menu List 2 Option 2</a></li>
+		                <li><a href="http://is.byu.edu">Menu List 2 Option 3</a></li>
+		                <li><a href="http://is.byu.edu">Menu List 2 Option 4</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="off-canvas-list">
+                <li><a href="http://google.com">Bottom Option</a></li>
+            </ul>
+        </aside>
+>>>>>>> origin/menus
 <div class="maincontent">
 <div class="stripe one">
    <p class="test"> <div class="headtext">
@@ -126,20 +189,8 @@
         
      </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	</div>
+</div>
 </div>
 </body>
 </html>
