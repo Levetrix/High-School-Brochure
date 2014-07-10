@@ -2,6 +2,7 @@ $medium-gutter: 32.24px;
 $small-gutter: 12.32px;
 $quarter-box: 221px;
 $half-box: 474.24;
+$mygreen: rgb(125,224,159);
 $myblue: #66B9E3;
 
 @font-face {
@@ -18,11 +19,12 @@ $myblue: #66B9E3;
     font-family: "Serveroff";
     src: url(../fonts/Web_Serveroff.otf);
 }
- 
+
 body {
 	padding:0;
 	margin:0;
 	color:rgb(70,70,70);
+	font-family:"OpenSans";
 }
 
 .stripe {
@@ -31,7 +33,11 @@ body {
 }
 
 .one {
-	background-color:#ccc;
+	background: url("../img/scientist.jpg");
+	background-position:85% 0px;
+	min-height:150px;
+	background-size:cover;
+	background-repeat:no-repeat;
 }
 
 .two {
@@ -52,6 +58,7 @@ body {
 .headtext{
 	text-align:right;
 	margin-right: $medium-gutter;
+	margin-top:-2em;
 }
 
 .test {
@@ -59,18 +66,31 @@ body {
     text-align:right;
 }
 
-.headh1 {
-	font-size:1.9em;
-	font-family:"OpenSans";
-	font-weight:200;
-}
 
-.headh2 {
-	font-size:1.4em;
-    font-family:calibri;
+.headh1 {
+    font-size:1.9em;
     font-family: "OpenSans";
+    text-align:left;
+    min-width:300px;
+    max-width:301px;
+    margin-left:calc(50% - 108px);
+    margin-right:0px;
+    padding-right:0;
+    padding-left:0;
     font-weight:200;
-}
+    }
+    .headh2{
+    font-size:1.4em;
+    font-family: "OpenSans";
+    text-align:left;
+    min-width:300px;
+    max-width:301px;
+    margin-left:calc(50% - 108px);
+    margin-right:0px;
+    padding-right:0;
+    padding-left:0;
+    font-weight:200;
+    }
 
 .mainh2 {
     font-size:1.4em;
@@ -144,9 +164,8 @@ body {
 	display:block;
 	width:13.8em;
 	margin-top:.769em;
-	background-color:rgba(255,255,255,.5);
 	margin-left:calc(50% - 126px);
-	border-top: solid white 1px;
+	border-top: solid rgba(225,225,225,0) 1px;
     margin-right:.769em;
     
 }
@@ -238,7 +257,7 @@ p {
 }
 
 .mailLink {
-	color: $myblue;
+	color: $mygreen;
 }
 
 .contactTitle {
@@ -286,11 +305,11 @@ textarea {
 }
 
 input:focus {
-	border: 1px solid $myblue;
+	border: 1px solid $mygreen;
 }
 
 textarea:focus {
-    border: 1px solid $myblue;
+    border: 1px solid $mygreen;
 }
 	
 .contactAreaQuarter {
@@ -310,7 +329,7 @@ textarea:focus {
 	display:none;
 }
 
-.button {
+.button1 {
 	float:left;
 	color:rgb(70,70,70);
 	height:32.24px;
@@ -323,18 +342,81 @@ textarea:focus {
 	text-decoration:none;
 }
 
-.button:hover {
-    border: 1px solid $myblue;
-    color:$myblue;
+.button1:hover {
+    border: 1px solid $mygreen;
+    color:$mygreen;
+}
+
+.firstTile {
+	border-color: $mygreen;
+}
+
+.firstList {
+	border-color:$mygreen;
 }
 
 /*--------------------------------
 --------------------------------*/
-@media (min-width: 404px) {
+@media (min-width: 0px) and (max-width:534px) {
+	.test{
+	margin-top:-5em;
+	}
+	
+    .headtext {
+    display:none;
+    }
 
 }
 
 @media (min-width: 535px) {    
+    .one {
+    min-height:300px;
+    background-position:60% 0;
+    }
+    
+    .headh1 {
+    text-align:left;
+    min-width:300px;
+    max-width:301px;
+    margin-left:calc(50% - 8em);
+    margin-right:0px;
+    padding-right:0;
+    padding-left:0;
+    }
+    .headh2{
+    text-align:left;
+    min-width:300px;
+    max-width:301px;
+    margin-left:calc(50% - 10.85em);
+    margin-right:0px;
+    padding-right:0;
+    padding-left:0;
+    }
+}
+
+@media (min-width: 535px) {    
+	.one {
+	min-height:300px;
+	}
+	
+	.headh1 {
+	text-align:left;
+	min-width:300px;
+	max-width:301px;
+    margin-left:calc(50% - 8em);
+    margin-right:0px;
+    padding-right:0;
+    padding-left:0;
+	}
+	.headh2{
+    text-align:left;
+    min-width:300px;
+    max-width:301px;
+    margin-left:calc(50% - 10.85em);
+    margin-right:0px;
+    padding-right:0;
+    padding-left:0;
+    }
 	.two {
 	min-height:0px;
 	}
@@ -352,14 +434,14 @@ textarea:focus {
     }
     
     .listContainer {
-    min-width:474px;
+    min-width:480px;
     }
     
     .floatTitle {
     margin-left:calc(50% - 15.85em);
     }
     
-    .button {
+    .button1 {
     margin-left:calc(50% - 15.85em);
     }
     
@@ -374,12 +456,35 @@ textarea:focus {
 }
 
 @media (min-width: 784px) {
+	.headtext {
+	}
+	
+	.firstList {
+	border-color: rgb(168,168,168);
+	}
+	
+	.one {
+    min-height:450px;
+    background-size:cover;
+    background-repeat:no-repeat;
+    }
+    
+    .headh1, .headh2 {
+    margin-left:calc(50% - 11.9em);
+    max-width:850px;
+ 
+    }
+    
+    .headh2 {
+    margin-left:calc(50% - 16.15em);
+    }
+	
 	.two {
 	}
 	
     .threeh2list {
     text-align:left;
-    border-top: 1px solid rgb(168,168,168);
+    border-top: 1px solid $mygreen;
     }
     
     .listTitle {
@@ -419,11 +524,11 @@ textarea:focus {
     }
 
     .floatTitle {
-    margin-left:calc(50% - 23.85em);
+    margin-left:calc(50% - 23.74em);
     }
     
-    .button {
-    margin-left:calc(50% - 23.85em);
+    .button1 {
+    margin-left:calc(50% - 23.74em);
     }
 
     .floatInfo {
@@ -444,9 +549,27 @@ textarea:focus {
 }
 
 @media (min-width:1054px) {
+    
+    .one {
+    background-position: 50% 0;
+    }
+    
+	.headh1, .headh2 {
+    margin-left:calc(50% - 16.35em);
+ 
+    }
+    
+    .headh2 {
+    margin-left:calc(50% - 22.1em);
+    }
+	
 	.floatInfo {
 	margin-top:27px;
 	}
+    
+    .firstTile {
+    border-color: rgb(168,168,168);
+    }
 	
 	.topRow {
 	padding-top:15px;
@@ -469,8 +592,8 @@ textarea:focus {
 	margin-bottom:22em;
 	}
 	
-	.button {
-	margin-left:calc(50% - 31.1em);
+	.button1 {
+	margin-left:calc(50% - 30.98em);
 	}
 	
 	.listTitle {
@@ -479,7 +602,7 @@ textarea:focus {
 		
 	.threeh2 {
     text-align:right;
-    border-top: 1px solid rgb(168,168,168);
+    border-top: 1px solid $mygreen;
 	}
 	
 	.tileContainer {
