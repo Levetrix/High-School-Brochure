@@ -6,9 +6,9 @@ $medium-gutter: 32.24px;
 $small-gutter: 12.32px;
 $quarter-box: 221px;
 $half-box: 474.24;
-$mygreen: rgb(125,224,159);
+$mygree: rgb(116,201,114);
+$mygreen: #008cba;
 $myblue: #66B9E3;
- 
 @font-face {
     font-family: "OpenSansCn";
     src: url(../fonts/OpenSans-CondLight.ttf);
@@ -29,6 +29,8 @@ body {
 	margin:0;
 	color:rgb(70,70,70);
 	font-family:"OpenSans";
+	line-height:1.5em;
+	background-color:#F9F9F9;
 }
 
 /*.menu-sidebar {
@@ -52,6 +54,15 @@ body {
   }
 }*/
 
+.myTitle {
+	padding-left:2em;
+	padding-top:3px;
+}
+
+.logo {
+	max-height:2.1em;
+}
+
 .stripe {
 	position:relative;
 	padding: 3em .769em;
@@ -67,17 +78,16 @@ body {
  
 .two {
 	min-height:450px;
+    padding-bottom:1em;
 }
 
 .three {
     text-align:center;
-    background-color:white;
     padding-top: 1.5em;
     padding-bottom:1.5em;
 }
 
 .four {
-    background-color:white;
 }
 
 .headtext{
@@ -124,7 +134,6 @@ body {
 }
 
 .twoh2 {
-	
 }
 
 .circleImg {
@@ -137,13 +146,19 @@ body {
 	background-color:#000;
 }
 
+.list {
+	margin-left:0;
+}
+
 .list li {
 	display:list-item;
 	padding:0;
+	line-height:1.4em;
 	font-family: "OpenSans";
 	padding-bottom:$medium-gutter;
 	margin-left:-2.4em;
 	list-style: none;
+	padding-left:2.5em;
 	
 }
 
@@ -160,7 +175,7 @@ body {
 }
 
 .list {
-	border-top:rgb(168,168,168) solid 1px;
+	border-top: $mygreen solid 1px;
 	display:inline-block;
 	text-align:left;
 	margin-top:0;
@@ -170,7 +185,7 @@ body {
     -webkit-margin-after: 0em; 
     -webkit-margin-start: 0px;
     margin-right:28px;
-    max-width:181px;
+    max-width:221px;
     overflow:visible;
 }
 
@@ -215,7 +230,7 @@ body {
 	display:inline-block;
 	position:relative;
 	width:13.8em;
-	height:8.538em;
+	min-height:150px;
 	margin-top:.769em;
 	margin-right:2.01em;
     border-top:1px solid rgb(168,168,168);
@@ -233,18 +248,18 @@ body {
     min-height:265px;
 }
 
-    .tileInvis1 {
+.tileInvis1 {
     display:none;
-    }
+}
 
-    .tileInvis {
+.tileInvis {
     display:none;
-    }
+}
 
 
 h3 {
 	display:block;
-	min-height:2.5em;
+	min-height:3em;
 	font-size:1.05em;
 	margin:0;
 	font-weight:400;
@@ -259,6 +274,9 @@ p {
     font-family:"OpenSans";
     font-size:13px;
     line-height:1.5em;
+    margin: 1em 0;
+    color: rgb(90,90,90);
+    margin:.5em 0;
 }
 
 .tileText {
@@ -279,16 +297,26 @@ p {
 .infoText {
 	font-family:"OpenSans";
 	font-size:1.05em;
+	line-height:1.4em;
 }
 
 .mailLink {
 	color: $mygreen;
+	text-decoration:underline;
 }
 
 .contactTitle {
 	border-bottom:1px solid rgb(168,168,168);
 	padding-bottom:31px;
 }
+
+.contactInfoTitle {
+	color: $mygreen;
+}
+
+#contactForm {
+    margin-bottom:16px;
+    }
 
 .contactQuarter {
     display:inline-block;
@@ -393,7 +421,9 @@ textarea:focus {
 
 }
 
-@media (min-width: 535px) {    
+@media (min-width: 535px) {
+	
+	
     .one {
     min-height:300px;
     background-position:60% 0;
@@ -419,7 +449,11 @@ textarea:focus {
     }
 }
 
-@media (min-width: 535px) {    
+@media (min-width: 535px) {  
+	.secondTile {
+    border-color: $mygreen;
+    }
+    
 	.one {
 	min-height:300px;
 	}
@@ -481,6 +515,10 @@ textarea:focus {
 }
 
 @media (min-width: 784px) {
+	.thirdTile {
+	border-color: $mygreen;
+	}
+	
 	.headtext {
 	}
 	
@@ -593,7 +631,6 @@ textarea:focus {
 	}
     
     .firstTile {
-    border-color: rgb(168,168,168);
     }
 	
 	.topRow {
@@ -601,6 +638,7 @@ textarea:focus {
 	}
 	
 	#contactForm {
+	margin-bottom:16px;
 	}
 	
 	.contactTitle {

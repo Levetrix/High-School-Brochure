@@ -9,12 +9,13 @@
 	<!-- Other JS plugins can be included here -->
 	
 	<script>
-	  $(document).foundation();
-	  $(document).ready(function (){
-		  $('.off-canvas-wrap').bind("click", function() {
-			  $('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'move-right');
-		  });
-	  });
+	$(document).foundation();
+    $(document).ready(function (){
+          $('.left-small').bind("click", function() {
+                $('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'move-right');
+          });
+    });
+
 	</script>
 </head>
 <body>
@@ -30,7 +31,7 @@
                 <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
             </section>
             <section class="right tab-bar-section">
-                <h1 class="title">Independent Study</h1>
+                <h1 class="mytitle"><img src="img/logoWhite1.png" class="logo" alt="BYUIS Logo"></h1>
             </section>
  
         </nav> <!-- END NAV.TAB-BAR HIDE-FOR-LARGE-UP -->
@@ -39,38 +40,50 @@
         <aside class="left-off-canvas-menu">
             <ul class="off-canvas-list">
                 <li><label>Navigation</label></li>
-                <li><a href="http://is.byu.edu">Menu Option 1</a></li>
+                <li><a href="http://is.byu.edu">Login</a></li>
             </ul>
             <ul class="off-canvas-list">
-                <li><label>List 1</label></li>
+                <li><label>Students</label></li>
                 <!-- <li class="has-dropdown"><a href="http://is.byu.edu">Menu List 1</a> -->
                     <ul class="off-canvas-list">
-		                <li><a href="http://is.byu.edu">Menu List 1 Option 1</a></li>
-		                <li><a href="http://is.byu.edu">Menu List 1 Option 2</a></li>
-		                <li><a href="http://is.byu.edu">Menu List 1 Option 3</a></li>
+                        <li><a href="http://is.byu.edu/site/courses/index.cfm#university=on|high-school=on|middle-school=false|continuing-education=false|ig=on|online=on|paper=on">Add a Class</a></li>
+		                <li><a href="http://is.byu.edu/site/support/find-testing-center.cfm">Testing Centers</a></li>
+		                <li><a href="http://is.byu.edu/site/courses/ordertrans.cfm">Request Transcript</a></li>
+                        <li><a href="http://is.byu.edu/site/financial/scholarship.cfm">Scholarships</a></li>
+                        <li><a href="http://is.byu.edu/site/about/FAQ.cfm">FAQ</a></li>
                     </ul>
                 </li>
             </ul>
             <ul class="off-canvas-list">
-                <li><label>List 2</label></li>
+                <li><label>Educators</label></li>
                 <!-- <li class="has-dropdown"><a href="page.html">Menu List 2</a> -->
                     <ul class="off-canvas-list">
-		                <li><a href="http://is.byu.edu">Menu List 2 Option 1</a></li>
-		                <li><a href="http://is.byu.edu">Menu List 2 Option 2</a></li>
-		                <li><a href="http://is.byu.edu">Menu List 2 Option 3</a></li>
-		                <li><a href="http://is.byu.edu">Menu List 2 Option 4</a></li>
+		                <li><a href="http://is.byu.edu/site/courses/index.cfm">Course Catalog</a></li>
+                        <li><a href="http://is.byu.edu/site/support/studentsprogress.cfm">Check Student Progress</a></li>
+                        <li><a href="http://is.byu.edu/site/courses/order.cfm">Request Catalog</a></li>
+                        <li><a href="http://is.byu.edu/site/financial/rewards.cfm">Rewards Program</a></li>
+                        <li><a href="http://is.byu.edu/site/programs/purchase/index.cfm">Purchase Orders</a></li>
+                        <li><a href="http://is.byu.edu/site/contactus/counselor_support.cfm">Contact State Representative</a></li>
                     </ul>
                 </li>
             </ul>
             <ul class="off-canvas-list">
-                <li><a href="http://google.com">Bottom Option</a></li>
+                <li><label>Parents</label></li>
+                <!-- <li class="has-dropdown"><a href="page.html">Menu List 2</a> -->
+                    <ul class="off-canvas-list">
+                        <li><a href="http://is.byu.edu/site/about/what-is.cfm">About Us</a></li>
+                        <li><a href="http://is.byu.edu/site/programs/HighSchoolProgram.cfm">High School Programs</a></li>
+                        <li><a href="http://is.byu.edu/site/courses/index.cfm">Course Catalog</a></li>
+                        <li><a href="http://is.byu.edu/site/courses/tuition.cfm">Tuition</a></li>
+                    </ul>
+                </li>
             </ul>
         </aside>
 <div class="maincontent">
 <div class="stripe one">
    <p class="test"> <div class="headtext">
        <h1 class="headh1">Secondary Education Suite</h1>
-       <h2 class="headh2">Awesome Text Here</h2>
+       <h2 class="headh2">Award-Winning Stuff</h2>
    </div> </p>
 </div>
 <div class="stripe two">
@@ -80,14 +93,14 @@
         </div>
         
         <div class="listContainer tile">
-	        <ul class="list firstList">
+	        <ul class="list ">
 	            <li>Affordable Quality Courses</li>
 	            <li>Award Winning Content</li>
 	            <li>Pace and Performance Analytics</li>
 	            <li>Free Student-Teacher Assistance</li>
 	            <li class="liToggle">Affordable Quality Courses</li>
 	        </ul>
-	        <ul class="list listHidden">
+	        <ul class="list listHidden ">
                 <li>Affordable Quality Courses</li>
                 <li>Award Winning Content</li>
                 <li>Pace and Performance Analytics</li>
@@ -104,10 +117,10 @@
 	    </div><div class="tile firstTile">
 	       <h3>Teacher Dashboard</h3>
 	       <p >Lots and lots of tileText will go here. Russ will make all the tileText, just copy/paste when ready.</p>
-        </div><div class="tile">
+        </div><div class="tile secondTile">
            <h3>Teacher <br /> Dashboard</h3>
            <p >Lots and lots of tileText will go here. Russ will make all the tileText, just copy/paste when ready.</p>
-        </div><div class="tile">
+        </div><div class="tile thirdTile">
            <h3>Teacher <br /> Dashboard</h3>
            <p >Lots and lots of tileText will go here. Russ will make all the tileText, just copy/paste when ready.</p>
         </div><div class="tile">
@@ -138,12 +151,12 @@
         </div>
         <div class="floatInfo">
             <span class="infoText">
-            Contact Info:<br>
+            <span class="contactInfoTitle" >Contact Info:</span><br>
             1-801-422-2868<br>
             1-800-914-8931<br /> 
             <a class="mailLink" href=mailto"byuis@byu.edu">info@byuis.com</a><br>           
             <br />
-            <br>Mailing Information:<br>
+            <br><span class="contactInfoTitle" >Mailing Information:</span><br>
             BYU Independent Study<br>
             120 Morris Center<br>
             Provo, UT 84602-0300
