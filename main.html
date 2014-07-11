@@ -10,9 +10,16 @@
 	
 	<script>
 	$(document).foundation();
-    $(document).ready(function (){
-          $('.left-small').bind("click", function() {
+    $(document).ready(function () {
+          $('.left-small').bind("click.menu", function() {
                 $('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'move-right');
+                if ($('.move-right').length > 0) {
+                    $('.maincontent').bind("click.menu", function() {
+                    	console.log($(this));
+                        $('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'move-right');
+                        $(this).unbind(".menu");
+                	});
+                }
           });
     });
 
@@ -40,25 +47,13 @@
         <aside class="left-off-canvas-menu">
             <ul class="off-canvas-list">
                 <li><label>Navigation</label></li>
-                <li><a href="http://is.byu.edu">Login</a></li>
-            </ul>
-            <ul class="off-canvas-list">
-                <li><label>Students</label></li>
-                <!-- <li class="has-dropdown"><a href="http://is.byu.edu">Menu List 1</a> -->
-                    <ul class="off-canvas-list">
-                        <li><a href="http://is.byu.edu/site/courses/index.cfm#university=on|high-school=on|middle-school=false|continuing-education=false|ig=on|online=on|paper=on">Add a Class</a></li>
-		                <li><a href="http://is.byu.edu/site/support/find-testing-center.cfm">Testing Centers</a></li>
-		                <li><a href="http://is.byu.edu/site/courses/ordertrans.cfm">Request Transcript</a></li>
-                        <li><a href="http://is.byu.edu/site/financial/scholarship.cfm">Scholarships</a></li>
-                        <li><a href="http://is.byu.edu/site/about/FAQ.cfm">FAQ</a></li>
-                    </ul>
-                </li>
+                <li><a href="https://is.byu.edu/o2/index.cfm?event=public.login&redirect=/o2/index.cfm?event=person.currentRegistrations">Login</a></li>
+                <li><a href="http://is.byu.edu/site/courses/index.cfm">Course Catalog</a></li>
             </ul>
             <ul class="off-canvas-list">
                 <li><label>Educators</label></li>
                 <!-- <li class="has-dropdown"><a href="page.html">Menu List 2</a> -->
                     <ul class="off-canvas-list">
-		                <li><a href="http://is.byu.edu/site/courses/index.cfm">Course Catalog</a></li>
                         <li><a href="http://is.byu.edu/site/support/studentsprogress.cfm">Check Student Progress</a></li>
                         <li><a href="http://is.byu.edu/site/courses/order.cfm">Request Catalog</a></li>
                         <li><a href="http://is.byu.edu/site/financial/rewards.cfm">Rewards Program</a></li>
@@ -68,12 +63,23 @@
                 </li>
             </ul>
             <ul class="off-canvas-list">
+                <li><label>Students</label></li>
+                <!-- <li class="has-dropdown"><a href="http://is.byu.edu">Menu List 1</a> -->
+                    <ul class="off-canvas-list">
+                        <li><a href="http://is.byu.edu/site/support/find-testing-center.cfm">Testing Centers</a></li>
+		                <li><a href="http://is.byu.edu/site/courses/ordertrans.cfm">Request Transcript</a></li>
+                        <li><a href="http://is.byu.edu/site/financial/scholarship.cfm">Scholarships</a></li>
+                        <li><a href="http://is.byu.edu/site/about/FAQ.cfm">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <ul class="off-canvas-list">
                 <li><label>Parents</label></li>
                 <!-- <li class="has-dropdown"><a href="page.html">Menu List 2</a> -->
                     <ul class="off-canvas-list">
                         <li><a href="http://is.byu.edu/site/about/what-is.cfm">About Us</a></li>
                         <li><a href="http://is.byu.edu/site/programs/HighSchoolProgram.cfm">High School Programs</a></li>
-                        <li><a href="http://is.byu.edu/site/courses/index.cfm">Course Catalog</a></li>
                         <li><a href="http://is.byu.edu/site/courses/tuition.cfm">Tuition</a></li>
                     </ul>
                 </li>
