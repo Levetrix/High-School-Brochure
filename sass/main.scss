@@ -1,5 +1,8 @@
 /*@import "compass/css3";*/
 
+
+
+@import "foundation/settings";
 @import "foundation/components/offcanvas";
 
 $medium-gutter: 32.24px;
@@ -30,7 +33,6 @@ body {
 	color:rgb(70,70,70);
 	font-family:"OpenSans";
 	line-height:1.5em;
-	background-color:#F9F9F9;
 }
 
 /*.menu-sidebar {
@@ -55,12 +57,13 @@ body {
 }*/
 
 .myTitle {
-	padding-left:2em;
-	padding-top:3px;
+	padding-left:1em;
+	padding-top:4px;
+	padding-right:2em;
 }
 
 .logo {
-	max-height:2.1em;
+	max-height:2.9em;
 }
 
 .stripe {
@@ -167,7 +170,7 @@ body {
  font-family:"consolas";
  font-weight:200;
  font-size: .8em;
- padding-top:.2em;
+ padding-top:0em;
  margin-left:-.17em;
  width: 0.8em;
  float:left;

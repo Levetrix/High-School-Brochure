@@ -876,15 +876,15 @@ blockquote p {
   -webkit-backface-visibility: hidden;
   background: #333333;
   color: white;
-  height: 2.8125rem;
-  line-height: 2.8125rem;
+  height: 3.75rem;
+  line-height: 3.75rem;
   position: relative;
 }
 /* line 158, ../sass/foundation/components/_offcanvas.scss */
 .tab-bar h1, .tab-bar h2, .tab-bar h3, .tab-bar h4, .tab-bar h5, .tab-bar h6 {
   color: white;
   font-weight: bold;
-  line-height: 2.8125rem;
+  line-height: 3.75rem;
   margin: 0;
 }
 /* line 164, ../sass/foundation/components/_offcanvas.scss */
@@ -894,8 +894,8 @@ blockquote p {
 
 /* line 279, ../sass/foundation/components/_offcanvas.scss */
 .left-small {
-  width: 2.8125rem;
-  height: 2.8125rem;
+  width: 3.75rem;
+  height: 3.75rem;
   position: absolute;
   top: 0;
   border-right: solid 1px #1a1a1a;
@@ -904,8 +904,8 @@ blockquote p {
 
 /* line 280, ../sass/foundation/components/_offcanvas.scss */
 .right-small {
-  width: 2.8125rem;
-  height: 2.8125rem;
+  width: 3.75rem;
+  height: 3.75rem;
   position: absolute;
   top: 0;
   border-left: solid 1px #1a1a1a;
@@ -917,7 +917,7 @@ blockquote p {
   padding: 0 0.625rem;
   position: absolute;
   text-align: center;
-  height: 2.8125rem;
+  height: 3.75rem;
   top: 0;
 }
 @media only screen and (min-width: 40.063em) {
@@ -929,24 +929,24 @@ blockquote p {
 /* line 195, ../sass/foundation/components/_offcanvas.scss */
 .tab-bar-section.left {
   left: 0;
-  right: 2.8125rem;
+  right: 3.75rem;
 }
 /* line 199, ../sass/foundation/components/_offcanvas.scss */
 .tab-bar-section.right {
-  left: 2.8125rem;
+  left: 3.75rem;
   right: 0;
 }
 /* line 203, ../sass/foundation/components/_offcanvas.scss */
 .tab-bar-section.middle {
-  left: 2.8125rem;
-  right: 2.8125rem;
+  left: 3.75rem;
+  right: 3.75rem;
 }
 
 /* line 286, ../sass/foundation/components/_offcanvas.scss */
 .tab-bar .menu-icon {
   text-indent: 2.1875rem;
-  width: 2.8125rem;
-  height: 2.8125rem;
+  width: 3.75rem;
+  height: 3.75rem;
   display: block;
   padding: 0;
   color: white;
@@ -961,7 +961,7 @@ blockquote p {
   height: 0;
   top: 50%;
   margin-top: -0.5rem;
-  left: 0.90625rem;
+  left: 1.375rem;
   box-shadow: 0 0px 0 1px white, 0 7px 0 1px white, 0 14px 0 1px white;
   width: 1rem;
 }
@@ -1183,14 +1183,13 @@ ul.off-canvas-list li a:hover {
   src: url(../fonts/Web_Serveroff.otf);
 }
 
-/* line 27, ../sass/main.scss */
+/* line 30, ../sass/main.scss */
 body {
   padding: 0;
   margin: 0;
   color: #464646;
   font-family: "OpenSans";
   line-height: 1.5em;
-  background-color: #F9F9F9;
 }
 
 /*.menu-sidebar {
@@ -1213,24 +1212,25 @@ body {
     margin-right: 1px;
   }
 }*/
-/* line 57, ../sass/main.scss */
+/* line 59, ../sass/main.scss */
 .myTitle {
-  padding-left: 2em;
-  padding-top: 3px;
+  padding-left: 1em;
+  padding-top: 4px;
+  padding-right: 2em;
 }
 
-/* line 62, ../sass/main.scss */
+/* line 65, ../sass/main.scss */
 .logo {
-  max-height: 2.1em;
+  max-height: 2.9em;
 }
 
-/* line 66, ../sass/main.scss */
+/* line 69, ../sass/main.scss */
 .stripe {
   position: relative;
   padding: 3em .769em;
 }
 
-/* line 71, ../sass/main.scss */
+/* line 74, ../sass/main.scss */
 .one {
   background: url("../img/scientist.jpg");
   background-position: 85% 0px;
@@ -1239,33 +1239,33 @@ body {
   background-repeat: no-repeat;
 }
 
-/* line 79, ../sass/main.scss */
+/* line 82, ../sass/main.scss */
 .two {
   min-height: 450px;
   padding-bottom: 1em;
 }
 
-/* line 84, ../sass/main.scss */
+/* line 87, ../sass/main.scss */
 .three {
   text-align: center;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
 
-/* line 93, ../sass/main.scss */
+/* line 96, ../sass/main.scss */
 .headtext {
   text-align: right;
   margin-right: 32.24px;
   margin-top: -2em;
 }
 
-/* line 99, ../sass/main.scss */
+/* line 102, ../sass/main.scss */
 .test {
   display: block;
   text-align: right;
 }
 
-/* line 105, ../sass/main.scss */
+/* line 108, ../sass/main.scss */
 .headh1 {
   font-size: 1.9em;
   font-family: "OpenSans";
@@ -1279,7 +1279,7 @@ body {
   font-weight: 200;
 }
 
-/* line 117, ../sass/main.scss */
+/* line 120, ../sass/main.scss */
 .headh2 {
   font-size: 1.4em;
   font-family: "OpenSans";
@@ -1293,14 +1293,14 @@ body {
   font-weight: 200;
 }
 
-/* line 130, ../sass/main.scss */
+/* line 133, ../sass/main.scss */
 .mainh2 {
   font-size: 1.4em;
   display: block;
   orphans: 3;
 }
 
-/* line 139, ../sass/main.scss */
+/* line 142, ../sass/main.scss */
 .circleImg {
   display: none;
   position: absolute;
@@ -1311,12 +1311,12 @@ body {
   background-color: #000;
 }
 
-/* line 149, ../sass/main.scss */
+/* line 152, ../sass/main.scss */
 .list {
   margin-left: 0;
 }
 
-/* line 153, ../sass/main.scss */
+/* line 156, ../sass/main.scss */
 .list li {
   display: list-item;
   padding: 0;
@@ -1328,20 +1328,20 @@ body {
   padding-left: 2.5em;
 }
 
-/* line 165, ../sass/main.scss */
+/* line 168, ../sass/main.scss */
 .list li:before {
   content: "\003E \020";
   font-family: "consolas";
   font-weight: 200;
   font-size: .8em;
-  padding-top: .2em;
+  padding-top: 0em;
   margin-left: -.17em;
   width: 0.8em;
   float: left;
   margin-bottom: .5em;
 }
 
-/* line 177, ../sass/main.scss */
+/* line 180, ../sass/main.scss */
 .list {
   border-top: #008cba solid 1px;
   display: inline-block;
@@ -1357,20 +1357,20 @@ body {
   overflow: visible;
 }
 
-/* line 192, ../sass/main.scss */
+/* line 195, ../sass/main.scss */
 .listHidden {
   display: none;
   margin-right: 0;
 }
 
-/* line 197, ../sass/main.scss */
+/* line 200, ../sass/main.scss */
 .tileContainer {
   display: block;
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 203, ../sass/main.scss */
+/* line 206, ../sass/main.scss */
 .floatTitle {
   display: block;
   width: 13.8em;
@@ -1380,7 +1380,7 @@ body {
   margin-right: .769em;
 }
 
-/* line 215, ../sass/main.scss */
+/* line 218, ../sass/main.scss */
 .threeh2 {
   font-family: "OpenSans";
   font-weight: 200;
@@ -1394,7 +1394,7 @@ body {
   margin-bottom: 0em;
 }
 
-/* line 229, ../sass/main.scss */
+/* line 232, ../sass/main.scss */
 .tile {
   display: inline-block;
   position: relative;
@@ -1407,7 +1407,7 @@ body {
   overflow: auto;
 }
 
-/* line 241, ../sass/main.scss */
+/* line 244, ../sass/main.scss */
 .listContainer {
   padding: 0;
   max-width: 759.48px;
@@ -1418,17 +1418,17 @@ body {
   min-height: 265px;
 }
 
-/* line 251, ../sass/main.scss */
+/* line 254, ../sass/main.scss */
 .tileInvis1 {
   display: none;
 }
 
-/* line 255, ../sass/main.scss */
+/* line 258, ../sass/main.scss */
 .tileInvis {
   display: none;
 }
 
-/* line 260, ../sass/main.scss */
+/* line 263, ../sass/main.scss */
 h3 {
   display: block;
   min-height: 3em;
@@ -1439,7 +1439,7 @@ h3 {
   text-align: left;
 }
 
-/* line 272, ../sass/main.scss */
+/* line 275, ../sass/main.scss */
 p {
   text-align: left;
   font-family: "OpenSans";
@@ -1450,12 +1450,12 @@ p {
   margin: .5em 0;
 }
 
-/* line 282, ../sass/main.scss */
+/* line 285, ../sass/main.scss */
 .tileText {
   text-align: left;
 }
 
-/* line 286, ../sass/main.scss */
+/* line 289, ../sass/main.scss */
 .floatInfo {
   display: none;
   float: right;
@@ -1467,36 +1467,36 @@ p {
   text-align: left;
 }
 
-/* line 297, ../sass/main.scss */
+/* line 300, ../sass/main.scss */
 .infoText {
   font-family: "OpenSans";
   font-size: 1.05em;
   line-height: 1.4em;
 }
 
-/* line 303, ../sass/main.scss */
+/* line 306, ../sass/main.scss */
 .mailLink {
   color: #008cba;
   text-decoration: underline;
 }
 
-/* line 308, ../sass/main.scss */
+/* line 311, ../sass/main.scss */
 .contactTitle {
   border-bottom: 1px solid #a8a8a8;
   padding-bottom: 31px;
 }
 
-/* line 313, ../sass/main.scss */
+/* line 316, ../sass/main.scss */
 .contactInfoTitle {
   color: #008cba;
 }
 
-/* line 317, ../sass/main.scss */
+/* line 320, ../sass/main.scss */
 #contactForm {
   margin-bottom: 16px;
 }
 
-/* line 321, ../sass/main.scss */
+/* line 324, ../sass/main.scss */
 .contactQuarter {
   display: inline-block;
   margin: 0;
@@ -1504,7 +1504,7 @@ p {
   margin-top: 12.32px;
 }
 
-/* line 328, ../sass/main.scss */
+/* line 331, ../sass/main.scss */
 .contactHalf {
   display: inline-block;
   margin: 0;
@@ -1512,14 +1512,14 @@ p {
   margin-top: 12.32px;
 }
 
-/* line 335, ../sass/main.scss */
+/* line 338, ../sass/main.scss */
 input {
   font-family: "OpenSans";
   border: #a8a8a8 1px solid;
   padding-left: .5em;
 }
 
-/* line 341, ../sass/main.scss */
+/* line 344, ../sass/main.scss */
 h4 {
   display: block;
   font-size: 1.05em;
@@ -1532,7 +1532,7 @@ h4 {
   text-align: left;
 }
 
-/* line 353, ../sass/main.scss */
+/* line 356, ../sass/main.scss */
 textarea {
   margin: 0;
   font-family: "OpenSans";
@@ -1540,35 +1540,35 @@ textarea {
   padding-left: .5em;
 }
 
-/* line 360, ../sass/main.scss */
+/* line 363, ../sass/main.scss */
 input:focus {
   border: 1px solid #008cba;
 }
 
-/* line 364, ../sass/main.scss */
+/* line 367, ../sass/main.scss */
 textarea:focus {
   border: 1px solid #008cba;
 }
 
-/* line 368, ../sass/main.scss */
+/* line 371, ../sass/main.scss */
 .contactAreaQuarter {
   box-sizing: border-box;
   width: 219px;
   height: 32.24px;
 }
 
-/* line 375, ../sass/main.scss */
+/* line 378, ../sass/main.scss */
 #message {
   width: 221px;
   min-height: 3.5em;
 }
 
-/* line 381, ../sass/main.scss */
+/* line 384, ../sass/main.scss */
 .displayToggle {
   display: none;
 }
 
-/* line 385, ../sass/main.scss */
+/* line 388, ../sass/main.scss */
 .button1 {
   float: left;
   color: #464646;
@@ -1582,18 +1582,18 @@ textarea:focus {
   text-decoration: none;
 }
 
-/* line 398, ../sass/main.scss */
+/* line 401, ../sass/main.scss */
 .button1:hover {
   border: 1px solid #008cba;
   color: #008cba;
 }
 
-/* line 403, ../sass/main.scss */
+/* line 406, ../sass/main.scss */
 .firstTile {
   border-color: #008cba;
 }
 
-/* line 407, ../sass/main.scss */
+/* line 410, ../sass/main.scss */
 .firstList {
   border-color: #008cba;
 }
@@ -1601,24 +1601,24 @@ textarea:focus {
 /*--------------------------------
 --------------------------------*/
 @media (min-width: 0px) and (max-width: 534px) {
-  /* line 414, ../sass/main.scss */
+  /* line 417, ../sass/main.scss */
   .test {
     margin-top: -5em;
   }
 
-  /* line 418, ../sass/main.scss */
+  /* line 421, ../sass/main.scss */
   .headtext {
     display: none;
   }
 }
 @media (min-width: 535px) {
-  /* line 427, ../sass/main.scss */
+  /* line 430, ../sass/main.scss */
   .one {
     min-height: 300px;
     background-position: 60% 0;
   }
 
-  /* line 432, ../sass/main.scss */
+  /* line 435, ../sass/main.scss */
   .headh1 {
     text-align: left;
     min-width: 300px;
@@ -1629,7 +1629,7 @@ textarea:focus {
     padding-left: 0;
   }
 
-  /* line 441, ../sass/main.scss */
+  /* line 444, ../sass/main.scss */
   .headh2 {
     text-align: left;
     min-width: 300px;
@@ -1641,17 +1641,17 @@ textarea:focus {
   }
 }
 @media (min-width: 535px) {
-  /* line 453, ../sass/main.scss */
+  /* line 456, ../sass/main.scss */
   .secondTile {
     border-color: #008cba;
   }
 
-  /* line 457, ../sass/main.scss */
+  /* line 460, ../sass/main.scss */
   .one {
     min-height: 300px;
   }
 
-  /* line 461, ../sass/main.scss */
+  /* line 464, ../sass/main.scss */
   .headh1 {
     text-align: left;
     min-width: 300px;
@@ -1662,7 +1662,7 @@ textarea:focus {
     padding-left: 0;
   }
 
-  /* line 470, ../sass/main.scss */
+  /* line 473, ../sass/main.scss */
   .headh2 {
     text-align: left;
     min-width: 300px;
@@ -1673,207 +1673,207 @@ textarea:focus {
     padding-left: 0;
   }
 
-  /* line 479, ../sass/main.scss */
+  /* line 482, ../sass/main.scss */
   .two {
     min-height: 0px;
   }
 
-  /* line 483, ../sass/main.scss */
+  /* line 486, ../sass/main.scss */
   .list .liToggle {
     display: none;
   }
 
-  /* line 491, ../sass/main.scss */
+  /* line 494, ../sass/main.scss */
   .listHidden {
     display: inline-block;
   }
 
-  /* line 495, ../sass/main.scss */
+  /* line 498, ../sass/main.scss */
   .listContainer {
     min-width: 480px;
   }
 
-  /* line 499, ../sass/main.scss */
+  /* line 502, ../sass/main.scss */
   .floatTitle {
     margin-left: calc(50% - 15.85em);
   }
 
-  /* line 503, ../sass/main.scss */
+  /* line 506, ../sass/main.scss */
   .button1 {
     margin-left: calc(50% - 15.85em);
   }
 
-  /* line 507, ../sass/main.scss */
+  /* line 510, ../sass/main.scss */
   .tileInvis1 {
     display: inline-block;
   }
 
-  /* line 511, ../sass/main.scss */
+  /* line 514, ../sass/main.scss */
   #message {
     width: 474.24;
     min-height: 5.15em;
   }
 }
 @media (min-width: 784px) {
-  /* line 518, ../sass/main.scss */
+  /* line 521, ../sass/main.scss */
   .thirdTile {
     border-color: #008cba;
   }
 
-  /* line 525, ../sass/main.scss */
+  /* line 528, ../sass/main.scss */
   .firstList {
     border-color: #a8a8a8;
   }
 
-  /* line 529, ../sass/main.scss */
+  /* line 532, ../sass/main.scss */
   .one {
     min-height: 450px;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
-  /* line 535, ../sass/main.scss */
+  /* line 538, ../sass/main.scss */
   .headh1, .headh2 {
     margin-left: calc(50% - 11.9em);
     max-width: 850px;
   }
 
-  /* line 541, ../sass/main.scss */
+  /* line 544, ../sass/main.scss */
   .headh2 {
     margin-left: calc(50% - 16.15em);
   }
 
-  /* line 548, ../sass/main.scss */
+  /* line 551, ../sass/main.scss */
   .threeh2list {
     text-align: left;
     border-top: 1px solid #008cba;
   }
 
-  /* line 553, ../sass/main.scss */
+  /* line 556, ../sass/main.scss */
   .listTitle {
     float: left;
     margin-left: 0px;
     margin-bottom: 100px;
   }
 
-  /* line 561, ../sass/main.scss */
+  /* line 564, ../sass/main.scss */
   .listContainer {
     min-width: 727.32px;
     min-height: 265px;
     padding: 0;
   }
 
-  /* line 567, ../sass/main.scss */
+  /* line 570, ../sass/main.scss */
   ul .displayToggle {
     display: list-item;
   }
 
-  /* line 580, ../sass/main.scss */
+  /* line 583, ../sass/main.scss */
   .tile {
     margin-right: 2.01em;
     display: inline-block;
   }
 
-  /* line 585, ../sass/main.scss */
+  /* line 588, ../sass/main.scss */
   .tileInvis {
     display: inline-block;
   }
 
-  /* line 589, ../sass/main.scss */
+  /* line 592, ../sass/main.scss */
   .floatTitle {
     margin-left: calc(50% - 23.74em);
   }
 
-  /* line 593, ../sass/main.scss */
+  /* line 596, ../sass/main.scss */
   .button1 {
     margin-left: calc(50% - 23.74em);
   }
 
-  /* line 597, ../sass/main.scss */
+  /* line 600, ../sass/main.scss */
   .floatInfo {
     display: inline-block;
   }
 
-  /* line 601, ../sass/main.scss */
+  /* line 604, ../sass/main.scss */
   .info {
     display: none;
   }
 
-  /* line 605, ../sass/main.scss */
+  /* line 608, ../sass/main.scss */
   .tileContainer {
     max-width: 763px;
   }
 
-  /* line 609, ../sass/main.scss */
+  /* line 612, ../sass/main.scss */
   .listTileContainer {
     max-width: 250px;
   }
 }
 @media (min-width: 1054px) {
-  /* line 616, ../sass/main.scss */
+  /* line 619, ../sass/main.scss */
   .one {
     background-position: 50% 0;
   }
 
-  /* line 620, ../sass/main.scss */
+  /* line 623, ../sass/main.scss */
   .headh1, .headh2 {
     margin-left: calc(50% - 16.35em);
   }
 
-  /* line 625, ../sass/main.scss */
+  /* line 628, ../sass/main.scss */
   .headh2 {
     margin-left: calc(50% - 22.1em);
   }
 
-  /* line 629, ../sass/main.scss */
+  /* line 632, ../sass/main.scss */
   .floatInfo {
     margin-top: 27px;
   }
 
-  /* line 636, ../sass/main.scss */
+  /* line 639, ../sass/main.scss */
   .topRow {
     padding-top: 15px;
   }
 
-  /* line 640, ../sass/main.scss */
+  /* line 643, ../sass/main.scss */
   #contactForm {
     margin-bottom: 16px;
   }
 
-  /* line 644, ../sass/main.scss */
+  /* line 647, ../sass/main.scss */
   .contactTitle {
     border-bottom: none;
   }
 
-  /* line 648, ../sass/main.scss */
+  /* line 651, ../sass/main.scss */
   .listContainer {
     min-height: 265px;
   }
 
-  /* line 652, ../sass/main.scss */
+  /* line 655, ../sass/main.scss */
   .floatTitle {
     float: left;
     margin-left: 0px;
     margin-bottom: 22em;
   }
 
-  /* line 658, ../sass/main.scss */
+  /* line 661, ../sass/main.scss */
   .button1 {
     margin-left: calc(50% - 30.98em);
   }
 
-  /* line 662, ../sass/main.scss */
+  /* line 665, ../sass/main.scss */
   .listTitle {
     margin-bottom: 100px;
   }
 
-  /* line 666, ../sass/main.scss */
+  /* line 669, ../sass/main.scss */
   .threeh2 {
     text-align: right;
     border-top: 1px solid #008cba;
   }
 
-  /* line 671, ../sass/main.scss */
+  /* line 674, ../sass/main.scss */
   .tileContainer {
     max-width: 1024px;
   }

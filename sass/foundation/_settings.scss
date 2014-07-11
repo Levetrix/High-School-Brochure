@@ -680,9 +680,9 @@ $magellan-padding: 0 !important;
 // $include-html-off-canvas-classes: $include-html-classes;
 
 // $tabbar-bg: #333;
-// $tabbar-height: rem-calc(45);
+$tabbar-height: rem-calc(60);
 // $tabbar-icon-width: $tabbar-height;
-// $tabbar-line-height: $tabbar-height;
+$tabbar-line-height: $tabbar-height;
 // $tabbar-color: #fff;
 // $tabbar-middle-padding: 0 rem-calc(10);
 
@@ -693,7 +693,7 @@ $magellan-padding: 0 !important;
 // Off Canvas Tab Bar Headers
 // $tabbar-header-color: #fff;
 // $tabbar-header-weight: $font-weight-bold;
-// $tabbar-header-line-height: $tabbar-height;
+$tabbar-header-line-height: $tabbar-height;
 // $tabbar-header-margin: 0;
 
 // Off Canvas Menu Variables
@@ -718,8 +718,8 @@ $magellan-padding: 0 !important;
 // $tabbar-menu-icon-hover: scale-color($tabbar-menu-icon-color, $lightness: -30%);
 
 // $tabbar-menu-icon-text-indent: rem-calc(35);
-// $tabbar-menu-icon-width: $tabbar-height;
-// $tabbar-menu-icon-height: $tabbar-height;
+$tabbar-menu-icon-width: $tabbar-height;
+$tabbar-menu-icon-height: $tabbar-height;
 // $tabbar-menu-icon-padding: 0;
 
 // $tabbar-hamburger-icon-width: rem-calc(16);
