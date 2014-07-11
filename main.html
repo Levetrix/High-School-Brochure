@@ -8,21 +8,35 @@
 	<script src="js/foundation/foundation.offcanvas.js"></script>
 	<!-- Other JS plugins can be included here -->
 	
-	<script>
-	$(document).foundation();
-    $(document).ready(function () {
-          $('.left-small').bind("click.menu", function() {
-                $('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'move-right');
-                if ($('.move-right').length > 0) {
-                    $('.maincontent').bind("click.menu", function() {
-                    	console.log($(this));
-                        $('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'move-right');
-                        $(this).unbind(".menu");
-                	});
-                }
-          });
-    });
-
+	<script type="text/javascript">
+	(function($){
+		var debug = false;
+		$(document).foundation();
+	    $(document).ready(function () {
+			var closeMenuFunction = function() {
+				if($('.move-right').length > 0) {
+		        	$('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'move-right');
+			        $('.maincontent').unbind("click.menumain");
+			        if(debug) console.log("The menu should be closed/closing. The click handler has been removed from the .maincontent element.");
+				}
+			};
+	        $('.left-small').bind("click.menu", function() {
+	        	if(debug) console.log("left-small clicked.");
+				//	Toggle the menu. This institutes the "current" state the user is requesting. (As in, it adds the class we're checking for later.)
+				$('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'move-right');
+				//	Detect the existence of .move-right on the document. If it exists, then the menu is currently open.
+				if($('.move-right').length == 0) {
+					//	The menu has been closed!
+					if(debug) console.log("The menu has been closed!");
+			        $('.maincontent').unbind("click.menumain");
+			    } else {
+					//	The menu is open!
+					if(debug) console.log("The menu is open!");
+				    $('.maincontent').bind("click.menumain", closeMenuFunction);
+				}
+	        });
+	    });
+	})(jQuery);
 	</script>
 </head>
 <body>
@@ -93,10 +107,13 @@
         </aside>
 <div class="maincontent">
 <div class="stripe one">
-   <p class="test"> <div class="headtext">
+   <p class="test">
+   	<div class="headtext">
        <h1 class="headh1">High School Suite</h1>
        <h2 class="headh2">BYU Independent Study</h2>
-   </div> </p>
+   	</div>
+   </p>
+
 </div>
 <div class="stripe two">
      <div class="listTileContainer tileContainer">
