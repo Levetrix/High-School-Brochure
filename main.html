@@ -8,6 +8,51 @@
 	<script src="js/foundation/foundation.offcanvas.js"></script>
 	<!-- Other JS plugins can be included here -->
 	
+	<script language="javascript" type="text/javascript">
+$(document).ready(function() {
+      console.log(document.cookie);
+      //    This selector should be changed to find your form element, and then the "submit" button within it.
+      //    (The submit button is the thing they click on to submit the form, it doesn't strictly have to be a button)
+      $("#enterForm .button").bind("click", function(e){
+            //    Instantiate the internal variables...
+            var pdata = {},               //    This object will be populated with your form data automatically.
+                  formSerial = $("#enterForm").serializeArray(),  //    This is the initial parse of data from your form. Change the selector to find the form element (<form>)
+                  //timeStamp = (new Date().getTime() / 1000),    //    This was used initially to measure response times. This code has been removed, but I left this line in case we wanted to do it later.
+                  tid = (typeof tid != "undefined")?tid:-1;       //    The "tid" is the tiny-url id. If the form isn't associated with a tiny-url, nor a page from the database, this should be -1
+                  tpid = (typeof tpid != "undefined")?tpid:-1;    //    The "tpid" is the page id from the database that the submissions should be associated with. Again, if this isn't one then the value should be -1
+                  pid = (typeof pid != "undefined")?pid:("EXTERNAL-SOURCE " + document.cookie + (new Date().getTime() / 1000));     //    This is the page group id, this needs to be unique per request.
+            ;
+            e.preventDefault();           //    This stops the button from submitting the form if it's an actual "submit" button.
+            
+            //    The following grabs all the data and puts it into the pdata object.
+            //    This is requrired because the database is not a straight-up table of the data. A little work here solves the flexibility needs.
+            for(var i=0;i<formSerial.length; i++) {
+                  pdata[i] = JSON.stringify({
+                        name:             formSerial[i].name,
+                        value:            formSerial[i].value,
+                        "t-id":           tid,
+                        "tp-id":    tpid,
+                        "p-id":           pid
+                  });
+            }
+            //    Here is where the data is sent to the portal to enter the database.
+            $.ajax({
+                  type: "POST",
+                  url: "//is.byu.edu/site/page/landing_page_submit.json.cfm?external",
+                  data: pdata,
+                  success: function() {
+                        //    The contents of the single quote can be modified to fit the needs of your page.
+                        //    This example replaces the form with different HTML so that there is no possibility of duplicate submissions from the same page.
+                        $("#enterForm").replaceWith($('<div id="enterForm">Thank you! We\'ll contact you with the phone or email addres you provided if you win!<br/><h1>Enjoy the game!</h1></div>'));
+                  }
+            });
+            //    In case you wanted redundant preventDefault()... this kind of used to do the same thing... (deprecated)
+            //return false;
+      });
+});
+</script>
+	
+	
 	<script type="text/javascript">
 	(function($){
 		var debug = false;
