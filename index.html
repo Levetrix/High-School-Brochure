@@ -8,7 +8,10 @@
 	<script src="js/foundation/foundation.offcanvas.js"></script>
 	<script type="text/javascript" src="//isdev.byu.edu/site/resources/lead_submit.js"></script>
 	<script type="text/javascript">
-		attachForm("#contactForm",".clickhere");
+		attachForm("#contactForm",".clickhere", function(e){
+			//$("#contactForm").replaceWith($('<div id="enterForm">Thank you! We\'ll contact you with the phone or email addres you provided if you win!<br/><h1>Enjoy the game!</h1></div>'));
+			$("#form-submit").html('<img src="img/green-check-mark.png" class="form-success" />Thank you for your interest! We will contact you shortly with more information.').addClass("form-success");
+		});
 	</script>
 	<script type="text/javascript">
 	(function($){
@@ -194,7 +197,7 @@
             </span>
         </div>
         
-        <form name="topRow contactForm" id="contactForm" method="post" action="insert.php">
+        <form name="topRow" id="contactForm" method="post" action="insert.php">
 		    <div class="contactQuarter">
 		        <h4>Name:</h4>
 		        <input class="contactAreaQuarter" type="text" placeholder="Kyle Jones" name="name" id="name" required >
@@ -222,6 +225,7 @@
 		    <div class="button1 clickhere">
 			    SUBMIT
 		    </div>
+		    <div id="form-submit"></div>
 			<input type="hidden" id="form-id" name="form" value="High School Suite">
 			<input type="hidden" id="send_email_to_marketing-id" name="send-email-to-marketing" value="true">
 	     </form>

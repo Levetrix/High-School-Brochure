@@ -12,6 +12,8 @@ $half-box: 474.24;
 $mygree: rgb(116,201,114);
 $mygreen: #008cba;
 $myblue: #66B9E3;
+
+
 @font-face {
     font-family: "OpenSansCn";
     src: url(../fonts/OpenSans-CondLight.ttf);
@@ -410,6 +412,16 @@ textarea:focus {
 
 .firstList {
 	border-color:$mygreen;
+}
+
+img.form-success {
+max-height: 1.5rem;
+float: left;
+}
+div.form-success {
+text-align: left;
+line-height: 1rem;
+margin: 1rem;
 }
 
 /*--------------------------------
