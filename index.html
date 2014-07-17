@@ -1,241 +1,216 @@
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="stylesheets/main.css" type="text/css" />
-    <!--  this is a test  -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="stylesheets/main.css" type="text/css" />
 	<script src="js/vendor/jquery-2.1.1.min.js"></script>
 	<script src="js/foundation/foundation.js"></script>
 	<script src="js/foundation/foundation.offcanvas.js"></script>
 	<script type="text/javascript" src="//isdev.byu.edu/site/resources/lead_submit.js"></script>
 	<script type="text/javascript">
+		var debug = false;
 		attachForm("#contactForm",".clickhere", function( data, textStatus, jqXHR ){
-			console.log("ajax connection done.");
+			if(debug){console.log("ajax connection done.")};
 			//	This is an example of a simple thing you could use to create a new element after your form. Placing a "placeholder" element provides you a natural way to move/place the response data where you want it. For flexibility of design, the way you've done it here is actually better. Therefore this is commented out.
-			//$("#contactForm").insertAfter($('<div id="form-response">' + data.message + '</div>'));
+			//$('<div id="form-response">' + data.message + '</div>').insertAfter($("#contactForm"));
 			$("#form-submit").html('<img src="img/green-check-mark.png" class="form-success" />Thank you for your interest! We will contact you shortly with more information.').addClass("form-success");
-		}, false, false);	//	The last two parameters are optional and here are set to their default values. They govern an optional setting if you supply null for the handler function and rely on the default setting there, and the debug setting which needs to be true to include debug information in the console.
+		}, false, debug);	//	The last two parameters are optional and here are set to their default values. They govern an optional setting if you supply null for the handler function and rely on the default setting there, and the debug setting which needs to be true to include debug information in the console.
 	</script>
 	<script type="text/javascript">
 	(function($){	//	We've wrappered this javascript to keep it contained.
 		var debug = false;	//	development variable. optional and could be deleted here without consequence to execution.
 		$(document).foundation();	//	Initialize the foundation framework.
-	    $(document).ready(function () {	//	Run the rest on document "ready" state change. (if document is somehow magically already in that state, this will fire immediately.)
-	    	//	Because this function is attached in multiple places, we define it as a variable so that it can exist once only in the code.
+			$(document).ready(function () {	//	Run the rest on document "ready" state change. (if document is somehow magically already in that state, this will fire immediately.)
+				//	Because this function is attached in multiple places, we define it as a variable so that it can exist once only in the code.
 			var closeMenuFunction = function() {
 				if($('.move-right').length > 0) {	//	This forces the function to operate as only a "close".
-		        	$('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'move-right');
-			        $('.maincontent').unbind("click.menumain");
-			        if(debug) console.log("The menu should be closed/closing. The click handler has been removed from the .maincontent element.");
+							$('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'move-right');
+							$('.maincontent').unbind("click.menumain");
+							if(debug) console.log("The menu should be closed/closing. The click handler has been removed from the .maincontent element.");
 				}
 			};
-	        $('.left-small').bind("click.menu", function() {
-	        	if(debug) console.log("left-small clicked.");
+					$('.left-small').bind("click.menu", function() {
+						if(debug) console.log("left-small clicked.");
 				//	Toggle the menu. This institutes the "current" state the user is requesting. (As in, it adds the class we're checking for later.)
 				$('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'move-right');
 				//	Detect the existence of .move-right on the document. If it exists, then the menu is currently open.
 				if($('.move-right').length == 0) {
 					//	The menu has been closed!
 					if(debug) console.log("The menu has been closed!");
-			        $('.maincontent').unbind("click.menumain");
-			    } else {
+							$('.maincontent').unbind("click.menumain");
+					} else {
 					//	The menu is open!
 					if(debug) console.log("The menu is open!");
-				    $('.maincontent').bind("click.menumain", closeMenuFunction);
+						$('.maincontent').bind("click.menumain", closeMenuFunction);
 				}
-	        });
-	    });
+					});
+			});
 	})(jQuery);
 	</script>
 </head>
 <body>
-
-<!-- OFF CANVAS SECTIONS WRAPPING THE MAIN CONTENT -->
-<div class="off-canvas-wrap">
-    <div class="inner-wrap">
- 
-        <!-- OFF CANVAS MENU BAR -->
-        <nav class="tab-bar hide-for-large-up">
- 
-            <section class="left-small">
-                <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
-            </section>
-            <section class="right tab-bar-section">
-                <h1 class="mytitle"><img src="img/logoWhite1.png" class="logo" alt="BYUIS Logo"></h1>
-            </section>
- 
-        </nav> <!-- END NAV.TAB-BAR HIDE-FOR-LARGE-UP -->
- 
-        <!-- OFF CANVAS MENU -->
-        <aside class="left-off-canvas-menu">
-            <ul class="off-canvas-list">
-                
-                <li><a href="https://is.byu.edu/o2/index.cfm?event=public.login&redirect=/o2/index.cfm?event=person.currentRegistrations">Login</a></li>
-                <li><a href="http://is.byu.edu/site/courses/index.cfm">Course Catalog</a></li>
-                <li><a href="http://is.byu.edu/site/courses/order.cfm">Request Catalog</a></li>
-                <!--  <li><a href="http://is.byu.edu/site/support/studentsprogress.cfm">Check Student Progress</a></li> -->
-                <li><a href="http://is.byu.edu/site/financial/rewards.cfm">Rewards Program</a></li>
-                <li><a href="http://is.byu.edu/site/programs/purchase/index.cfm">Purchase Orders</a></li>
-                <li><a href="http://is.byu.edu/site/contactus/counselor_support.cfm">Contact State Representative</a></li>
-            </ul>
-           <!--  <ul class="off-canvas-list">
-                <li><label>Educators</label></li>
-                <!-- <li class="has-dropdown"><a href="page.html">Menu List 2</a> -->
-                    <!-- <ul class="off-canvas-list">
-                        <li><a href="http://is.byu.edu/site/support/studentsprogress.cfm">Check Student Progress</a></li>
-                        <li><a href="http://is.byu.edu/site/courses/order.cfm">Request Catalog</a></li>
-                        <li><a href="http://is.byu.edu/site/financial/rewards.cfm">Rewards Program</a></li>
-                        <li><a href="http://is.byu.edu/site/programs/purchase/index.cfm">Purchase Orders</a></li>
-                        <li><a href="http://is.byu.edu/site/contactus/counselor_support.cfm">Contact State Representative</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="off-canvas-list"> 
-                <li><label>Students</label></li> -->
-                <!-- <li class="has-dropdown"><a href="http://is.byu.edu">Menu List 1</a> -->
-                    <!-- <ul class="off-canvas-list">
-                        <li><a href="http://is.byu.edu/site/support/find-testing-center.cfm">Testing Centers</a></li>
-		                <li><a href="http://is.byu.edu/site/courses/ordertrans.cfm">Request Transcript</a></li>
-                        <li><a href="http://is.byu.edu/site/financial/scholarship.cfm">Scholarships</a></li>
-                        <li><a href="http://is.byu.edu/site/about/FAQ.cfm">FAQ</a></li>
-                    </ul>
-                </li>
-            </ul>
-            
-            <ul class="off-canvas-list">
-                <li><label>Parents</label></li> -->
-                <!-- <li class="has-dropdown"><a href="page.html">Menu List 2</a> -->
-                    <!-- <ul class="off-canvas-list">
-                        <li><a href="http://is.byu.edu/site/about/what-is.cfm">About Us</a></li>
-                        <li><a href="http://is.byu.edu/site/programs/HighSchoolProgram.cfm">High School Programs</a></li>
-                        <li><a href="http://is.byu.edu/site/courses/tuition.cfm">Tuition</a></li>
-                    </ul>
-                </li>
-            </ul> -->
-            
-        </aside>
-<div class="maincontent">
-<div class="stripe one">
-   <p class="test">
-   	<div class="headtext">
-       <h1 class="headh1">BYU High School Suite</h1>
-       <h2 class="headh2">Your teachers, our courses &nbsp</h2>
-   	</div>
-   </p>
-
-</div>
-<div class="stripe two">
-     <div class="listTileContainer tileContainer">
-    
-        <div class="listTitle floatTitle"><h2 class="threeh2list threeh2" >Benefits of Secondary Education Suite</h2>
-        </div>
-        
-        <div class="listContainer tile">
-	        <ul class="list ">
-	            <li>Affordable Quality Courses</li>
-	            <li>Integrated Assessments</li>
-	            <li>Pace and Performance Analytics</li>
-	            <li>Free Student-Teacher Assistance</li>
-	            <li class="liToggle">Award-Winning Content</li>
-	        </ul>
-	        <ul class="list listHidden ">
-                <li>Award-Winning Content</li>
-                <li>Free Technical Support</li>
-                <li>No Minimum Course Enrollments</li>
-                <li>Available Educational Support</li>
-            </ul>
-        </div>
-   
-	</div>  
-</div>
-<div class="stripe three" class="Teacher-Dashboard">
-    
-	<div class="tileContainer">
-	    <div class="floatTitle"><h2 class="threeh2" >Key Features</h2>
-	    </div><div class="tile firstTile">
-	       <h3>Flexible<br />Instruction</h3>
-           <p >Educators can respond to unique student needs through BYU High School Suite, which gives teachers the flexibility to scale instruction as large or small as necessary. </p>
-        </div><div class="tile secondTile">
-           <h3>Teacher <br /> Dashboard</h3>
-           <p >Provides instant snapshot summaries of student progress, enrollment information, student responsiveness, and other key performance metrics.  </p>
-        </div><div class="tile thirdTile">
-           <h3>Online <br /> Collaboration </h3>
-           <p >Initiates and facilitates enhanced student performance by using course wikis, journals, group emails, online discussions, and course announcements. </p>
-        </div><div class="tileInvis1 tile">
-           <h3>Assessment <br />Results</h3>
-           <p >Produces a comprehensive summary of class and student assessment results.  This tool will flag issues pertaining to difficulty and potential discrimination.  </p>
-        </div><div class="tileInvis1 tile">
-           <h3>Critical Student List</h3>
-           <p >Notifies teachers of students in danger of either falling behind or failing the course.  When used effectively, teachers can mitigate challenges early-on.</p>
-        </div><div class="tileInvis1 tile">
-           <h3>Learning Outcomes<br />Mastery</h3>
-           <p >Enables teachers to keep track of how well students internalize lessons by comparing class and student performance against selected standards.</p>
-        </div><div class="tileInvis tile">
-          <h3>Personal Performance  <br />Metrics</h3>
-           <p >Allows teachers to focus on metrics specific to each student, including pacing and performance summaries.</p>
-        </div><div class="tileInvis tile">
-           <h3>Dropbox Tool</h3>
-           <p >Students submit assignments online using DropBox, a proven feature used in the best virtual classrooms.</p>
-        </div><div class="tileInvis tile">
-           <h3>To-Do List</h3>
-           <p >Increases teacher productivity by allowing the To-Do list to guide their workflow management.</p>
-        </div>
+	<!-- OFF CANVAS SECTIONS WRAPPING THE MAIN CONTENT -->
+	<div class="off-canvas-wrap">
+		<!-- INNER WRAP DIV -->
+		<div class="inner-wrap">
+			<!-- OFF CANVAS MENU BAR -->
+			<!-- NAV.TAB-BAR HIDE-FOR-LARGE-UP -->
+			<nav class="tab-bar hide-for-large-up">
+	 			<section class="left-small">
+					<a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+				</section>
+				<section class="right tab-bar-section">
+					<h1 class="mytitle"><img src="img/logoWhite1.png" class="logo" alt="BYUIS Logo"></h1>
+				</section>
+			</nav><!-- END OF: NAV.TAB-BAR HIDE-FOR-LARGE-UP -->
+			<!-- END OF: OFF CANVAS MENU BAR -->
+	 
+			<!-- OFF CANVAS MENU -->
+			<aside class="left-off-canvas-menu">
+					<ul class="off-canvas-list">
+							
+							<li><a href="https://is.byu.edu/o2/index.cfm?event=public.login&redirect=/o2/index.cfm?event=person.currentRegistrations">Login</a></li>
+							<li><a href="http://is.byu.edu/site/courses/index.cfm">Course Catalog</a></li>
+							<li><a href="http://is.byu.edu/site/courses/order.cfm">Request Catalog</a></li>
+							<!--	<li><a href="http://is.byu.edu/site/support/studentsprogress.cfm">Check Student Progress</a></li> -->
+							<li><a href="http://is.byu.edu/site/financial/rewards.cfm">Rewards Program</a></li>
+							<li><a href="http://is.byu.edu/site/programs/purchase/index.cfm">Purchase Orders</a></li>
+							<li><a href="http://is.byu.edu/site/contactus/counselor_support.cfm">Contact State Representative</a></li>
+					</ul>
+			</aside>
+			<!-- END OF: OFF CANVAS MENU -->
+			<!-- MAIN CONTENT DIV -->
+			<div class="maincontent">
+				<!-- STRIPE ONE -->
+				<div class="stripe one">
+					 <p class="test">
+					 	<div class="headtext">
+							 <h1 class="headh1">BYU High School Suite</h1>
+							 <h2 class="headh2">Your teachers, our courses &nbsp</h2>
+					 	</div>
+					 </p>
+				</div>
+				<!-- END OF: STRIPE ONE -->
+				<!-- STRIPE TWO -->
+				<div class="stripe two">
+					<div class="listTileContainer tileContainer">
+						<div class="listTitle floatTitle"><h2 class="threeh2list threeh2" >Benefits of Secondary Education Suite</h2></div>
+						<div class="listContainer tile">
+							<ul class="list ">
+								<li>Affordable Quality Courses</li>
+								<li>Integrated Assessments</li>
+								<li>Pace and Performance Analytics</li>
+								<li>Free Student-Teacher Assistance</li>
+								<li class="liToggle">Award-Winning Content</li>
+							</ul>
+							<ul class="list listHidden ">
+								<li>Award-Winning Content</li>
+								<li>Free Technical Support</li>
+								<li>No Minimum Course Enrollments</li>
+								<li>Available Educational Support</li>
+							</ul>
+						</div>
+					</div>	
+				</div>
+				<!-- END OF: STRIPE TWO -->
+				<!-- STRIPE THREE -->
+				<div class="stripe three" class="Teacher-Dashboard">
+					<div class="tileContainer">
+						<div class="floatTitle"><h2 class="threeh2" >Key Features</h2></div>
+						<div class="tile firstTile">
+							<h3>Flexible<br />Instruction</h3>
+							<p>Educators can respond to unique student needs through BYU High School Suite, which gives teachers the flexibility to scale instruction as large or small as necessary. </p>
+						</div><div class="tile secondTile">
+							<h3>Teacher<br /> Dashboard</h3>
+							<p>Provides instant snapshot summaries of student progress, enrollment information, student responsiveness, and other key performance metrics.	</p>
+						</div><div class="tile thirdTile">
+							<h3>Online<br /> Collaboration </h3>
+							<p>Initiates and facilitates enhanced student performance by using course wikis, journals, group emails, online discussions, and course announcements. </p>
+						</div><div class="tileInvis1 tile">
+							<h3>Assessment<br />Results</h3>
+							<p>Produces a comprehensive summary of class and student assessment results.	This tool will flag issues pertaining to difficulty and potential discrimination.	</p>
+						</div><div class="tileInvis1 tile">
+							<h3>Critical Student List</h3>
+							<p>Notifies teachers of students in danger of either falling behind or failing the course.	When used effectively, teachers can mitigate challenges early-on.</p>
+						</div><div class="tileInvis1 tile">
+							<h3>Learning Outcomes<br />Mastery</h3>
+							<p>Enables teachers to keep track of how well students internalize lessons by comparing class and student performance against selected standards.</p>
+						</div><div class="tileInvis tile">
+							<h3>Personal Performance<br />Metrics</h3>
+							<p>Allows teachers to focus on metrics specific to each student, including pacing and performance summaries.</p>
+						</div><div class="tileInvis tile">
+							<h3>Dropbox Tool</h3>
+							<p>Students submit assignments online using DropBox, a proven feature used in the best virtual classrooms.</p>
+						</div><div class="tileInvis tile">
+							<h3>To-Do List</h3>
+							<p>Increases teacher productivity by allowing the To-Do list to guide their workflow management.</p>
+						</div>
+					</div>
+				</div>
+				<!-- END OF: STRIPE THREE -->
+				<!-- STRIPE FOUR -->
+				<div class="stripe four">
+					<!-- TILE CONTAINER -->
+					<div class="tileContainer">
+						<div class="floatTitle"><h2 class="contactTitle threeh2	firstTile" >Request Info</h2></div>
+						<!-- FLOAT INFO -->
+						<div class="floatInfo">
+							<span class="infoText">
+								<span class="contactInfoTitle" >Contact Info:</span><br />
+								1-801-422-2868<br />
+								1-800-914-8931<br /> 
+								<a class="mailLink" href=mailto"byuis@byu.edu">info@byuis.com</a><br />					 
+								<br />
+								<br />
+								<span class="contactInfoTitle" >Mailing Information:</span><br />
+								BYU Independent Study<br />
+								120 Morris Center<br />
+								Provo, UT 84602-0300
+							</span>
+						</div>
+						<!-- END OF: FLOAT INFO -->
+						<!-- CONTACT FORM -->
+						<form name="topRow" id="contactForm">
+							<div class="contactQuarter">
+								<h4>Name:</h4>
+								<input class="contactAreaQuarter" type="text" placeholder="Kyle Jones" name="name" id="name" required >
+							</div>
+									 
+							<div class="topRow contactQuarter">
+								<h4>School/District:</h4>
+								<input class="contactAreaQuarter" type="text" placeholder="Clark County School District" name="city" id="school" required >
+							</div>
+									 
+							<div class="contactQuarter">
+								<h4>Phone:</h4>
+								<input class="contactAreaQuarter" type="tel" placeholder="(222) 222-2222" name="phone" id="phone">
+							</div>
+									 
+							<div class="contactQuarter">
+								<h4>Email:</h4>
+								<input class="contactAreaQuarter" type="email" placeholder="kyle.jones@example.com" name="email" id="email" required >
+							</div>
+							 
+							<div class="contactHalf">
+								<h4>Message:</h4>
+								<textarea class="contactAreaHalf" name="text" id="message" placeholder="..."></textarea>
+							</div>
+							<div class="button1 clickhere">
+								SUBMIT
+							</div>
+							<div id="form-submit"><!-- This is where the response from the form submission code will be placed after they submit. --></div>
+							<input type="hidden" id="form-id" name="form" value="High School Suite">
+							<input type="hidden" id="send_email_to_marketing-id" name="send-email-to-marketing" value="true">
+						</form>
+						<!-- END OF: CONTACT FORM -->
+					</div>
+					<!-- END OF: TILE CONTAINER -->
+				</div>
+				<!-- END OF: STRIPE FOUR -->
+			</div>
+			<!-- END OF: MAIN CONTENT DIV -->
+		</div>
+		<!-- END OF: INNER WRAP DIV -->
 	</div>
-</div>
-<div class="stripe four">
-    <div class="tileContainer">
-    
-        <div class="floatTitle"><h2 class="contactTitle threeh2  firstTile" >Request Info</h2>
-        </div>
-        <div class="floatInfo">
-            <span class="infoText">
-            <span class="contactInfoTitle" >Contact Info:</span><br>
-            1-801-422-2868<br>
-            1-800-914-8931<br /> 
-            <a class="mailLink" href=mailto"byuis@byu.edu">info@byuis.com</a><br>           
-            <br />
-            <br><span class="contactInfoTitle" >Mailing Information:</span><br>
-            BYU Independent Study<br>
-            120 Morris Center<br>
-            Provo, UT 84602-0300
-            </span>
-        </div>
-        
-        <form name="topRow" id="contactForm" method="post" action="insert.php">
-		    <div class="contactQuarter">
-		        <h4>Name:</h4>
-		        <input class="contactAreaQuarter" type="text" placeholder="Kyle Jones" name="name" id="name" required >
-		    </div>
-		         
-		    <div class="topRow contactQuarter">
-		        <h4>School/District:</h4>
-		        <input class="contactAreaQuarter" type="text" placeholder="Clark County School District" name="city" id="school" required >
-		    </div>
-		         
-		    <div class="contactQuarter">
-		        <h4>Phone:</h4>
-		        <input class="contactAreaQuarter" type="tel" placeholder="(222) 222-2222" name="phone" id="phone">
-		    </div>
-		         
-		    <div class="contactQuarter">
-		        <h4>Email:</h4>
-		        <input class="contactAreaQuarter" type="email" placeholder="kyle.jones@example.com" name="email" id="email" required >
-		    </div>
-		     
-		    <div class="contactHalf">
-		        <h4>Message:</h4>
-		        <textarea class="contactAreaHalf" name="text" id="message" placeholder="..."></textarea>
-	        </div>
-		    <div class="button1 clickhere">
-			    SUBMIT
-		    </div>
-		    <div id="form-submit"><!-- This is where the response from the form submission code will be placed after they submit. --></div>
-			<input type="hidden" id="form-id" name="form" value="High School Suite">
-			<input type="hidden" id="send_email_to_marketing-id" name="send-email-to-marketing" value="true">
-	     </form>
-     </div>
-</div>
-	</div>
-</div>
-</div>
+	<!-- END OF: OFF CANVAS SECTIONS WRAPPING THE MAIN CONTENT -->
 </body>
 </html>
