@@ -1,5 +1,4 @@
-/*@import "compass/css3";*/
-
+@import "compass/css3";
 
 
 @import "foundation/settings";
@@ -13,27 +12,21 @@ $mygree: rgb(116,201,114);
 $mygreen: #008cba;
 $myblue: #66B9E3;
 
+$OpenSans: "OpenSans", "OpenSans_IE";
+$OpenSansLt: "OpenSansLt", "OpenSansLt_IE";
 
-@font-face {
-    font-family: "OpenSansCn";
-    src: url(../fonts/OpenSans-CondLight.ttf);
-}
+@include font-face("OpenSans", font-files("//is.byu.edu/site/resources/fonts/OpenSans-regular.ttf", "//is.byu.edu/site/resources/fonts/OpenSans-regular.ttf", "//is.byu.edu/site/resources/fonts/OpenSans-regular.ttf", "//is.byu.edu/site/resources/fonts/OpenSans-regular.ttf"));
+@include font-face("OpenSansLt", font-files("//is.byu.edu/site/resources/fonts/opensans-light-webfont.ttf", "//is.byu.edu/site/resources/fonts/opensans-light-webfont.woff", "//is.byu.edu/site/resources/fonts/opensans-light-webfont.eot", "//is.byu.edu/site/resources/fonts/opensans-light-webfont.svg"));
+@include font-face("OpenSansLt_IE", font-files("//is.byu.edu/site/resources/fonts/opensans-light-webfont.ttf", "//is.byu.edu/site/resources/fonts/opensans-light-webfont.woff", "//is.byu.edu/site/resources/fonts/opensans-light-webfont.eot", "//is.byu.edu/site/resources/fonts/opensans-light-webfont.svg"));
+@include font-face("OpenSansLtCn", font-files("//is.byu.edu/site/resources/fonts/OpenSans-CondLight.ttf", "examples/bgrove.otf"));
+@include font-face("OpenSans_IE", font-files("//is.byu.edu/site/resources/fonts/opensans-regular-webfont.eot", "examples/bgrove.otf"));
 
-@font-face {
-    font-family: "OpenSans";
-    src: url(../fonts/opensans-light-webfont.woff);
-}
-
-@font-face {
-    font-family: "Serveroff";
-    src: url(../fonts/Web_Serveroff.otf);
-}
 
 body {
 	padding:0;
 	margin:0;
 	color:rgb(70,70,70);
-	font-family:"OpenSans";
+	font-family:$OpenSans;
 	line-height:1.5em;
 }
 
@@ -109,7 +102,7 @@ body {
 
 .headh1 {
     font-size:1.9em;
-    font-family: "OpenSans";
+    font-family: $OpenSans;
     text-align:left;
     min-width:300px;
     max-width:301px;
@@ -121,7 +114,7 @@ body {
     }
     .headh2{
     font-size:1.2em;
-    font-family: "OpenSans";
+    font-family: $OpenSans;
     text-align:left;
     min-width:300px;
     max-width:301px;
@@ -159,7 +152,7 @@ body {
 	display:list-item;
 	padding:0;
 	line-height:1.4em;
-	font-family: "OpenSans";
+	font-family: $OpenSans;
 	padding-bottom:$medium-gutter;
 	margin-left:-2.4em;
 	list-style: none;
@@ -218,7 +211,7 @@ body {
 
 
 .threeh2 {
-	font-family:"OpenSans";
+	font-family:$OpenSans;
     font-weight:200;
     font-size:1.4em;
     text-align:left;
@@ -268,7 +261,7 @@ h3 {
 	font-size:1.05em;
 	margin:0;
 	font-weight:400;
-	font-family:"OpenSans";
+	font-family:$OpenSans;
 	text-align:left;
 		
 }
@@ -276,7 +269,7 @@ h3 {
 
 p {
 	text-align:left;	
-    font-family:"OpenSans";
+    font-family:$OpenSans;
     font-size:13px;
     line-height:1.5em;
     margin: 1em 0;
@@ -300,7 +293,7 @@ p {
 }
 
 .infoText {
-	font-family:"OpenSans";
+	font-family:$OpenSans;
 	font-size:1.05em;
 	line-height:1.4em;
 }
@@ -338,7 +331,7 @@ p {
 }
 
 input {
-    font-family:"OpenSans";
+    font-family:$OpenSans;
     border:rgb(168,168,168) 1px solid;
     padding-left:.5em;
 }
@@ -351,13 +344,13 @@ h4 {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	font-weight: 400;
-	font-family: "OpenSans";
+	font-family: $OpenSans;
 	text-align: left;
 	}
 	
 textarea {
 	margin:0;
-	font-family:"OpenSans";
+	font-family:$OpenSans;
     border:rgb(168,168,168) 1px solid;
     padding-left:.5em;
 }
@@ -393,7 +386,7 @@ textarea:focus {
 	height:32.24px;
 	width:110px;
 	border: 1px solid rgb(168,168,168);
-	font-family:"OpenSans";
+	font-family:$OpenSans;
 	margin-left:calc(50% - 127px);
 	line-height:2em;
 	margin-top:1em;
