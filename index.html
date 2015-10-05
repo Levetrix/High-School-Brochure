@@ -1,6 +1,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="stylesheets/offcanvasmenu.css" type="text/css" />
 	<link rel="stylesheet" href="stylesheets/index.css" type="text/css" />
 	<script src="js/vendor/jquery-2.1.1.min.js"></script>
 	<script src="js/foundation/foundation.js"></script>
@@ -49,7 +50,7 @@
 </head>
 <body>
 	<!-- OFF CANVAS SECTIONS WRAPPING THE MAIN CONTENT -->
-	<div class="off-canvas-wrap">
+	<div class="off-canvas-wrap" data-offcanvas>
 		<!-- INNER WRAP DIV -->
 		<div class="inner-wrap">
 			<!-- OFF CANVAS MENU BAR -->
@@ -234,5 +235,6 @@
 		ga('require', 'ecommerce', 'ecommerce.js');   // Load the ecommerce plug-in.
 		
 	</script>
+	<script src="js/app.js"></script>
 </body>
 </html>
